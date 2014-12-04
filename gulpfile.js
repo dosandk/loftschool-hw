@@ -1,26 +1,9 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
-    exec = require('child_process').exec,
-    clean = require('gulp-clean'),
+    prefix = require('gulp-autoprefixer'),
+    livereload = require('gulp-livereload'),
+    connect = require('gulp-connect'),
     compass = require('gulp-compass');
-
-
-gulp.task('default', function() {
-    gulp.src([
-        './dev/css/*.css'
-    ])
-    .pipe(concat('ui.css'))
-    .pipe(gulp.dest('./dev/css/concat'))
-});
-
-gulp.task('concat', function() {
-    gulp.src([
-        './dev/css/*.css'
-    ])
-    .pipe(clean())
-    .pipe(concat('ui.min.css'))
-    .pipe(gulp.dest('./app/css'))
-});
 
 gulp.task('compass', function() {
     return gulp.src('./dev/scss/*.scss')
@@ -33,6 +16,39 @@ gulp.task('compass', function() {
         .pipe(gulp.dest('./dev/css'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./dev/scss/*.scss', ['compass', 'concat']);
+gulp.task('concat', ['compass'], function() {
+    return gulp.src(['./dev/css/*.css'])
+        .pipe(concat('ui.min.css'))
+        .pipe(gulp.dest('./app/css'))
 });
+
+gulp.task('concatCss', function() {
+    return gulp.src(['./dev/css/*.css'])
+        .pipe(concat('ui.min.css'))
+        .pipe(prefix({
+            browsers: ['> 1%', 'last 2 versions', 'ie 8']
+        }))
+        .pipe(gulp.dest('./app/css'))
+        .pipe(connect.reload());
+});
+
+gulp.task('html', function() {
+    gulp.src(['./app/index.html'])
+        .pipe(connect.reload());
+});
+
+// server connect
+gulp.task('connect', function() {
+    connect.server({
+        root: 'app',
+        port: 8000,
+        livereload: true
+    });
+});
+
+gulp.task('watch', function() {
+    gulp.watch('./dev/css/*.css', ['concatCss']);
+    gulp.watch('./app/index.html', ['html']);
+});
+
+gulp.task('default', ['connect', 'html', 'concatCss', 'watch']);
