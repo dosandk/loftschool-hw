@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
+    minify = require('gulp-minify-css'),
     prefix = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload'),
     connect = require('gulp-connect'),
@@ -23,11 +24,12 @@ gulp.task('concat', ['compass'], function() {
 });
 
 gulp.task('concatCss', function() {
-    return gulp.src(['./dev/css/*.css'])
+    return gulp.src(['./dev/css/**'])
         .pipe(concat('ui.min.css'))
         .pipe(prefix({
             browsers: ['> 1%', 'last 2 versions', 'ie 8']
         }))
+        .pipe(minify())
         .pipe(gulp.dest('./app/css'))
         .pipe(connect.reload());
 });
