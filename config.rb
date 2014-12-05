@@ -8,6 +8,7 @@ css_dir = "dev/css"
 sass_dir = "dev/scss"
 images_dir = "dev/img"
 javascripts_dir = "dev/js"
+fonts_dir = "dev/fonts"
 generated_images_dir = "dev/img/spritesheets"
 
 # You can select your preferred output style here (can be overridden via the command line):

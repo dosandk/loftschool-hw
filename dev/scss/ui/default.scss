@@ -19,6 +19,7 @@ time, mark, audio, video {
     border:0;
     outline:0;
     font-size:100%;
+    font-weight: normal;
     vertical-align:baseline;
     background:transparent;
 }
@@ -85,7 +86,7 @@ ul {
 // ui styles start
 .main-container {
     background: #fff url(../../img/page-bg-671x669.png);
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'firasans-book', sans-serif;
 }
 
 .header {
@@ -105,7 +106,7 @@ ul {
 
 .header-table {
         outline: 1px solid red;
-    max-width: 1220px;
+    max-width: 1200px;
     height: 120px;
     margin: 0 auto;
     .social-links {
@@ -135,7 +136,10 @@ ul {
     }
 
     .loftschool-logo-container {
+        width: 245px;
+        height: 57px;
         display: inline-block;
+        background: url(../../img/loftschool-log-245x57.png) no-repeat;
     }
 }
 
@@ -188,16 +192,25 @@ ul {
 .main-info-title,
 .experience-title,
 .education-title {
+    height: 70px;
+    line-height: 70px;
     font-size: 27px;
+    color: #3ba8c0;
+}
+
+.main-info-title {
+    margin-bottom: 16px;
+}
+.main-info-title-text {
+    padding: 0 20px;
+    display: inline-block;
+    border-bottom: 2px solid #3ba8c0;
 }
 
 .right-side {
     outline: 1px solid blue;
-
-
     @include span(8 last);
     @include push(1);
-
 }
 .about,
 .experience,
@@ -208,6 +221,17 @@ ul {
 
 .about {
     height: 320px;
+}
+.avatar-container {
+    width: 201px;
+    height: 200px;
+    background: url(../../img/default-avatar-icon-201x200.png) no-repeat;
+}
+.main-info-el {
+    font-size: 15px;
+}
+.main-info-el-title {
+    font-size: 17px;
 }
 
 .experience {
