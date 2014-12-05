@@ -1,0 +1,229 @@
+@import "base";
+//@include global-reset();
+
+// reset start
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+// reset end
+
+// scaffolding styles start
+.display-table {
+    display: table;
+}
+.display-table-row {
+    display: table-row;
+}
+.display-table-cell {
+    display: table-cell;
+}
+.inline-baseline-middle {
+    display: inline-block;
+    vertical-align: middle;
+}
+.fixed-table-layout {
+    table-layout: fixed;
+}
+.parent-size {
+    width: 100%;
+    height: 100%;
+}
+.parent-width {
+    width: 100%;
+}
+.parent-height {
+    height: 100%;
+}
+.parent-half-width {
+    width: 50%;
+}
+.relative {
+    position: relative;
+}
+.vertical-align-top {
+    vertical-align: top;
+}
+.vertical-align-middle {
+    vertical-align: middle;
+}
+.vertical-align-bottom {
+    vertical-align: bottom;
+}
+.to-center-inline {
+    text-align: center;
+}
+.to-right-inline {
+    text-align: right;
+}
+.to-left-inline {
+    text-align: left;
+}
+// scaffolding styles end
+
+// ui styles start
+.main-container {
+    background: #fff url(../../img/page-bg-671x669.png);
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header-inner-wrapper {
+    background: $content-bg;
+    padding: 0 20px;
+    @include breakpoint(768) {
+        padding: 0 35px;
+    }
+    @include breakpoint(320) {
+        padding: 0 15px;
+    }
+}
+
+.header-table {
+        outline: 1px solid red;
+    max-width: 1220px;
+    height: 120px;
+    margin: 0 auto;
+    .social-links {
+        display: inline-block;
+        * + * {
+            margin-left: 24px;
+        }
+    }
+    .social-icon {
+        outline: 1px solid red;
+        width: 46px;
+        height: 46px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .vk-icon {
+        background: url(../../img/vk-icon-46x46.png) no-repeat;
+    }
+    .tw-icon {
+        background: url(../../img/tw-icon-47x47.png) no-repeat;
+    }
+    .fb-icon {
+        background: url(../../img/fb-icon-47x47.png) no-repeat;
+    }
+    .gh-icon {
+        background: url(../../img/gh-icon-47x47.png) no-repeat;
+    }
+
+    .loftschool-logo-container {
+        display: inline-block;
+    }
+}
+
+.navigation-wrapper {
+    height: 220px;
+    background: $content-bg;
+    margin-bottom: 24px;
+
+    .navigation-el {
+        height: 72px;
+    }
+}
+
+.contacts-wrapper {
+    height: 155px;
+
+    .contacts-el {
+        height: 40px;
+    }
+}
+
+.shadow-gradient {
+    height: 4px;
+    background-color: #1c667a;
+    @include background(linear-gradient(90deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%));
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto 40px;
+    @include container();
+}
+
+.left-side {
+    outline: 1px solid red;
+
+    @include span(3);
+    @include breakpoint(320) {
+         @include span(12);
+    }
+    .navigation-wrapper {
+
+    }
+    .navigation {
+        outline: 1px solid red;
+
+    }
+}
+
+.main-info-title,
+.experience-title,
+.education-title {
+    font-size: 27px;
+}
+
+.right-side {
+    outline: 1px solid blue;
+
+
+    @include span(8 last);
+    @include push(1);
+
+}
+.about,
+.experience,
+.education {
+    background: $content-bg;
+    margin-bottom: 24px;
+}
+
+.about {
+    height: 320px;
+}
+
+.experience {
+
+}
+
+.education {
+
+}
+
+.footer {
+    height: 80px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    background: $content-bg;
+}
+
+// ui styles end
