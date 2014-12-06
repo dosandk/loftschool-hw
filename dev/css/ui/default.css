@@ -159,13 +159,83 @@ ul li {
 }
 .navigation-wrapper .navigation-el {
   height: 72px;
+  color: #959aa8;
+  font-size: 21px;
+  padding: 0 10px;
+}
+.navigation-wrapper .navigation-el.active {
+  color: #fff;
+  background: #3ba8c0;
+  font-size: 23px;
+}
+.navigation-wrapper .navigation-el.active .navigation-link {
+  border: none;
+  color: #fff;
+}
+.navigation-wrapper .navigation-el:not(.active):hover {
+  color: #3ba8c0;
+}
+.navigation-wrapper .navigation-el:not(.active):hover .navigation-link {
+  color: #3ba8c0;
+  border-bottom: 2px solid #3ba8c0;
+}
+.navigation-wrapper .navigation-link {
+  width: 100%;
+  line-height: 72px;
+  display: inline-block;
+  text-decoration: none;
+  color: #959aa8;
+}
+.navigation-wrapper .navigation-link:visited {
+  color: #959aa8;
+}
+.navigation-wrapper .navigation-link:focus {
+  color: #959aa8;
+}
+.navigation-wrapper .navigation-link:active {
+  color: #959aa8;
 }
 
 .contacts-wrapper {
   height: 155px;
 }
 .contacts-wrapper .contacts-el {
+  outline: 1px solid red;
   height: 40px;
+  color: #fff;
+}
+.contacts-wrapper .contact-icon-cell {
+  width: 70px;
+}
+.contacts-wrapper .mail-icon {
+  width: 21px;
+  height: 16px;
+  display: inline-block;
+  background: url(../../img/mail-icon-21x16.png) no-repeat;
+}
+.contacts-wrapper .phone-icon {
+  width: 19px;
+  height: 21px;
+  display: inline-block;
+  background: url(../../img/phone-icon-19x21.png) no-repeat;
+}
+.contacts-wrapper .skype-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url(../../img/skype-icon-20x20.png) no-repeat;
+}
+.contacts-wrapper .contacts-title {
+  background: #3ba8c0;
+}
+.contacts-wrapper .mail-el {
+  background: #41b9d4;
+}
+.contacts-wrapper .phone-el {
+  background: #48cbe8;
+}
+.contacts-wrapper .skype-el {
+  background: #51daf8;
 }
 
 .shadow-gradient {
@@ -221,9 +291,6 @@ ul li {
     padding-right: 0.83333%;
   }
 }
-.left-side .navigation {
-  outline: 1px solid red;
-}
 
 .main-info-title,
 .experience-title,
@@ -267,18 +334,45 @@ ul li {
   height: 320px;
 }
 
+.avatar-container-cell {
+  width: 250px;
+  text-align: center;
+}
+
 .avatar-container {
   width: 201px;
   height: 200px;
+  display: inline-block;
   background: url(../../img/default-avatar-icon-201x200.png) no-repeat;
 }
 
 .main-info-el {
   font-size: 15px;
+  margin-bottom: 13px;
 }
 
 .main-info-el-title {
   font-size: 17px;
+  font-family: 'firasans-medium';
+}
+
+.skills-title-cell {
+  width: 173px;
+}
+
+.skills-list-el {
+  display: inline-block;
+  padding: 0 14px;
+  text-align: center;
+  height: 19px;
+  line-height: 19px;
+  margin-right: 8px;
+  color: #fff;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlOGNhMiIvPjxzdG9wIG9mZnNldD0iNDclIiBzdG9wLWNvbG9yPSIjMmU4Y2EyIi8+PHN0b3Agb2Zmc2V0PSI0OCUiIHN0b3AtY29sb3I9IiMzYmE4YzAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYmE4YzAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(90deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%);
+  background: -webkit-linear-gradient(90deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%);
+  background: linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%);
+  border-radius: 2px;
 }
 
 .footer {

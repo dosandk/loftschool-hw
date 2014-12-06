@@ -147,17 +147,76 @@ ul {
     height: 220px;
     background: $content-bg;
     margin-bottom: 24px;
-
     .navigation-el {
         height: 72px;
+        color: #959aa8;
+        font-size: 21px;
+        padding: 0 10px;
+        &.active {
+            color: #fff;
+            background: #3ba8c0;
+            font-size: 23px;
+            .navigation-link {
+                border: none;
+                color: #fff;
+            }
+        }
+        &:not(.active):hover {
+            color: #3ba8c0;
+            .navigation-link {
+                color: #3ba8c0;
+                border-bottom: 2px solid #3ba8c0;
+            }
+        }
+    }
+    .navigation-link {
+        width: 100%;
+        line-height: 72px;
+        display: inline-block;
+        text-decoration: none;
+        @include link-colors(#959aa8, false, #959aa8, #959aa8, #959aa8)
     }
 }
 
 .contacts-wrapper {
     height: 155px;
-
     .contacts-el {
+            outline: 1px solid red;
         height: 40px;
+        color: #fff;
+    }
+    .contact-icon-cell {
+        width: 70px;
+    }
+    .mail-icon {
+        width: 21px;
+        height: 16px;
+        display: inline-block;
+        background: url(../../img/mail-icon-21x16.png) no-repeat;
+    }
+    .phone-icon {
+        width: 19px;
+        height: 21px;
+        display: inline-block;
+        background: url(../../img/phone-icon-19x21.png) no-repeat;
+    }
+    .skype-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url(../../img/skype-icon-20x20.png) no-repeat;
+    }
+    .contacts-title {
+        background: #3ba8c0;
+    }
+    .mail-el {
+        background: #41b9d4;
+    }
+    .phone-el {
+        background: #48cbe8;
+    }
+    .skype-el {
+        background: #51daf8;
     }
 }
 
@@ -179,13 +238,6 @@ ul {
     @include span(3);
     @include breakpoint(320) {
          @include span(12);
-    }
-    .navigation-wrapper {
-
-    }
-    .navigation {
-        outline: 1px solid red;
-
     }
 }
 
@@ -222,16 +274,26 @@ ul {
 .about {
     height: 320px;
 }
+.avatar-container-cell {
+    width: 250px;
+    text-align: center;
+}
 .avatar-container {
     width: 201px;
     height: 200px;
+    display: inline-block;
     background: url(../../img/default-avatar-icon-201x200.png) no-repeat;
 }
 .main-info-el {
     font-size: 15px;
+    margin-bottom: 13px;
 }
 .main-info-el-title {
     font-size: 17px;
+    font-family: 'firasans-medium';
+}
+.skills-title-cell {
+    width: 173px;
 }
 
 .experience {
@@ -240,6 +302,22 @@ ul {
 
 .education {
 
+}
+
+.skills-list {
+
+
+}
+.skills-list-el {
+    display: inline-block;
+    padding: 0 14px;
+    text-align: center;
+    height: 19px;
+    line-height: 19px;
+    margin-right: 8px;
+    color: #fff;
+    @include background (linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%));
+    border-radius: 2px;
 }
 
 .footer {
