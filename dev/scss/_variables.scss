@@ -2,3 +2,5 @@ $screen-xs-min: 320;
 $screen-sm-min: 768;
 
 $content-bg: #eff3f7;
+
+$ui-sprite: sprite-map('ui/*.png', $layout: 'smart', $spacing: 10px);

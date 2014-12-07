@@ -1,91 +1,9 @@
 @import "base";
-//@include global-reset();
+@import "reset";
+@import "table-scaffolding";
 
-// reset start
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    font-weight: normal;
-    vertical-align:baseline;
-    background:transparent;
-}
-ul {
-    li {
-        list-style-type: none;
-    }
-}
-// reset end
-
-// scaffolding styles start
-.display-table {
-    display: table;
-}
-.display-table-row {
-    display: table-row;
-}
-.display-table-cell {
-    display: table-cell;
-}
-.inline-baseline-middle {
-    display: inline-block;
-    vertical-align: middle;
-}
-.fixed-table-layout {
-    table-layout: fixed;
-}
-.parent-size {
-    width: 100%;
-    height: 100%;
-}
-.parent-width {
-    width: 100%;
-}
-.parent-height {
-    height: 100%;
-}
-.parent-half-width {
-    width: 50%;
-}
-.relative {
-    position: relative;
-}
-.vertical-align-top {
-    vertical-align: top;
-}
-.vertical-align-middle {
-    vertical-align: middle;
-}
-.vertical-align-bottom {
-    vertical-align: bottom;
-}
-.to-center-inline {
-    text-align: center;
-}
-.to-right-inline {
-    text-align: right;
-}
-.to-left-inline {
-    text-align: left;
-}
-// scaffolding styles end
-
-// ui styles start
 .main-container {
-    background: #fff url(../../img/page-bg-671x669.png);
+    background: #fff url(../../img/separated/page-bg-671x669.png);
     font-family: 'firasans-book', sans-serif;
 }
 
@@ -105,7 +23,6 @@ ul {
 }
 
 .header-table {
-        outline: 1px solid red;
     max-width: 1200px;
     height: 120px;
     margin: 0 auto;
@@ -116,35 +33,37 @@ ul {
         }
     }
     .social-icon {
-        outline: 1px solid red;
-        width: 46px;
-        height: 46px;
+        width: 47px;
+        height: 47px;
         display: inline-block;
         cursor: pointer;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
     }
     .vk-icon {
-        background: url(../../img/vk-icon-46x46.png) no-repeat;
+        @include sprite($ui-sprite, 'vk-icon-46x46', $offset-x: 0, $offset-y: 0);
     }
     .tw-icon {
-        background: url(../../img/tw-icon-47x47.png) no-repeat;
+        @include sprite($ui-sprite, 'tw-icon-47x47', $offset-x: 0, $offset-y: 0);
     }
     .fb-icon {
-        background: url(../../img/fb-icon-47x47.png) no-repeat;
+        @include sprite($ui-sprite, 'fb-icon-47x47', $offset-x: 0, $offset-y: 0);
     }
     .gh-icon {
-        background: url(../../img/gh-icon-47x47.png) no-repeat;
+        @include sprite($ui-sprite, 'gh-icon-47x47', $offset-x: 0, $offset-y: 0);
     }
 
     .loftschool-logo-container {
         width: 245px;
         height: 57px;
         display: inline-block;
-        background: url(../../img/loftschool-log-245x57.png) no-repeat;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'loftschool-log-245x57');
     }
 }
 
 .navigation-wrapper {
-    height: 220px;
     background: $content-bg;
     margin-bottom: 24px;
     .navigation-el {
@@ -174,40 +93,51 @@ ul {
         line-height: 72px;
         display: inline-block;
         text-decoration: none;
+        text-indent: 18px;
         @include link-colors(#959aa8, false, #959aa8, #959aa8, #959aa8)
     }
 }
 
 .contacts-wrapper {
-    height: 155px;
     .contacts-el {
-            outline: 1px solid red;
         height: 40px;
         color: #fff;
     }
     .contact-icon-cell {
-        width: 70px;
+        width: 81px;
+        text-align: right;
+        padding-right: 18px;
+    }
+    .contact-icon {
+        display: inline-block;
+        line-height: 16px;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
     }
     .mail-icon {
         width: 21px;
         height: 16px;
-        display: inline-block;
-        background: url(../../img/mail-icon-21x16.png) no-repeat;
+        @include sprite($ui-sprite, 'mail-icon-21x16');
     }
     .phone-icon {
         width: 19px;
         height: 21px;
-        display: inline-block;
-        background: url(../../img/phone-icon-19x21.png) no-repeat;
+        @include sprite($ui-sprite, 'phone-icon-19x21');
     }
     .skype-icon {
         width: 20px;
         height: 20px;
-        display: inline-block;
-        background: url(../../img/skype-icon-20x20.png) no-repeat;
+        @include sprite($ui-sprite, 'skype-icon-20x20');
     }
     .contacts-title {
         background: #3ba8c0;
+        font-size: 21px;
+        padding: 0 20px;
+        line-height: 40px;
+    }
+    .contact-link {
+        text-decoration: none;
+        @include link-colors(#fff, false, #fff, #fff, #fff)
     }
     .mail-el {
         background: #41b9d4;
@@ -227,15 +157,12 @@ ul {
 }
 
 .content {
-    width: 960px;
     margin: 0 auto 40px;
     @include container();
 }
 
 .left-side {
-    outline: 1px solid red;
-
-    @include span(3);
+    @include span(3 of 12 0);
     @include breakpoint(320) {
          @include span(12);
     }
@@ -250,18 +177,99 @@ ul {
     color: #3ba8c0;
 }
 
+.experience-title,
+.education-title {
+    margin-bottom: 32px;
+}
+
+.experience {
+    overflow: hidden;
+}
+.experience-info-list {
+
+    .experience-info-list-el {
+        margin-bottom: 32px;
+    }
+}
+
+.work-date {
+    font-family: 'fira_sanslight';
+    font-size: 15px;
+    line-height: 1.5;
+}
+.work-icon-cell {
+    width: 100px;
+    text-align: right;
+}
+.work-icon {
+    display: inline-block;
+    width: 36px;
+    height: 34px;
+    background-image: $ui-sprite;
+    background-repeat: no-repeat;
+    @include sprite($ui-sprite, 'work-icon-36x34');
+}
+
+.company-name-info-cell {
+    padding-left: 30px;
+    color: #4a545d;
+}
+.company-name {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.education {
+    overflow: hidden;
+}
+.education-info-list {
+    .education-info-list-el {
+        color: #4a545d;
+        margin-bottom: 32px;
+    }
+    .education-icon-cell {
+        width: 100px;
+        text-align: right;
+    }
+    .education-icon {
+        width: 41px;
+        height: 23px;
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'education-icon-41x23');
+    }
+    .courses-icon {
+        width: 41px;
+        height: 32px;
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'courses-icon-41x32');
+    }
+    .education-palace-cell {
+        padding-left: 30px;
+    }
+    .education-palace {
+        font-size: 17px;
+    }
+    .education-date {
+        font-size: 15px;
+        font-family: 'fira_sanslight';
+    }
+}
+
 .main-info-title {
     margin-bottom: 16px;
 }
-.main-info-title-text {
-    padding: 0 20px;
+.h1-txt {
     display: inline-block;
     border-bottom: 2px solid #3ba8c0;
+    padding: 0 20px;
 }
 
 .right-side {
-    outline: 1px solid blue;
-    @include span(8 last);
+    @include span(8 of 12 0);
     @include push(1);
 }
 .about,
@@ -272,7 +280,7 @@ ul {
 }
 
 .about {
-    height: 320px;
+
 }
 .avatar-container-cell {
     width: 250px;
@@ -282,7 +290,8 @@ ul {
     width: 201px;
     height: 200px;
     display: inline-block;
-    background: url(../../img/default-avatar-icon-201x200.png) no-repeat;
+    background-image: $ui-sprite;
+    @include sprite($ui-sprite, 'default-avatar-icon-201x200');
 }
 .main-info-el {
     font-size: 15px;
@@ -291,6 +300,7 @@ ul {
 .main-info-el-title {
     font-size: 17px;
     font-family: 'firasans-medium';
+    margin-right: 18px;
 }
 .skills-title-cell {
     width: 173px;
@@ -327,5 +337,3 @@ ul {
     font-weight: 300;
     background: $content-bg;
 }
-
-// ui styles end
