@@ -2,13 +2,18 @@
 @import "reset";
 @import "table-scaffolding";
 
+
+.upper-case {
+    text-transform: uppercase;
+}
+
 .main-container {
     background: #fff url(../../img/separated/page-bg-671x669.png);
     font-family: 'firasans-book', sans-serif;
 }
 
 .header {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
 }
 
 .header-inner-wrapper {
@@ -24,7 +29,7 @@
 
 .header-table {
     max-width: 1200px;
-    height: 120px;
+    height: 112px;
     margin: 0 auto;
     .social-links {
         display: inline-block;
@@ -65,9 +70,11 @@
 
 .navigation-wrapper {
     background: $content-bg;
+    margin-right: -10px;
     margin-bottom: 24px;
     .navigation-el {
         height: 72px;
+        line-height: 76px;
         color: #959aa8;
         font-size: 21px;
         padding: 0 10px;
@@ -90,7 +97,7 @@
     }
     .navigation-link {
         width: 100%;
-        line-height: 72px;
+        line-height: 70px;
         display: inline-block;
         text-decoration: none;
         text-indent: 18px;
@@ -99,14 +106,15 @@
 }
 
 .contacts-wrapper {
+    margin-right: -10px;
     .contacts-el {
         height: 40px;
         color: #fff;
     }
     .contact-icon-cell {
-        width: 81px;
+        width: 62px;
         text-align: right;
-        padding-right: 18px;
+        padding-right: 21px;
     }
     .contact-icon {
         display: inline-block;
@@ -133,7 +141,7 @@
         background: #3ba8c0;
         font-size: 21px;
         padding: 0 20px;
-        line-height: 40px;
+        line-height: 52px;
     }
     .contact-link {
         text-decoration: none;
@@ -151,35 +159,37 @@
 }
 
 .shadow-gradient {
-    height: 4px;
+    height: 3px;
     background-color: #1c667a;
     @include background(linear-gradient(90deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%));
 }
 
 .content {
-    margin: 0 auto 40px;
+    margin: 0 auto 9px;
     @include container();
 }
+
 
 .left-side {
     @include span(3 of 12 0);
     @include breakpoint(320) {
          @include span(12);
     }
+    margin-right: -1%;
 }
 
 .main-info-title,
 .experience-title,
 .education-title {
-    height: 70px;
-    line-height: 70px;
+    height: 69px;
+    line-height: 66px;
     font-size: 27px;
     color: #3ba8c0;
 }
 
 .experience-title,
 .education-title {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
 }
 
 .experience {
@@ -188,12 +198,15 @@
 .experience-info-list {
 
     .experience-info-list-el {
-        margin-bottom: 32px;
+        margin-bottom: 28px;
+        &:last-child {
+            margin-bottom: 19px;
+        }
     }
 }
 
 .work-date {
-    font-family: 'fira_sanslight';
+    font-family: 'firasans-light';
     font-size: 15px;
     line-height: 1.5;
 }
@@ -225,11 +238,15 @@
 .education-info-list {
     .education-info-list-el {
         color: #4a545d;
-        margin-bottom: 32px;
+        margin-bottom: 26px;
+        &:last-child {
+            margin-bottom: 20px;
+        }
     }
     .education-icon-cell {
         width: 100px;
         text-align: right;
+        vertical-align: 36px;
     }
     .education-icon {
         width: 41px;
@@ -252,10 +269,11 @@
     }
     .education-palace {
         font-size: 17px;
+        line-height: 1;
     }
     .education-date {
         font-size: 15px;
-        font-family: 'fira_sanslight';
+        font-family: 'firasans-light';
     }
 }
 
@@ -277,6 +295,7 @@
 .education {
     background: $content-bg;
     margin-bottom: 24px;
+    margin-right: -10px;
 }
 
 .about {
@@ -293,15 +312,20 @@
     background-image: $ui-sprite;
     @include sprite($ui-sprite, 'default-avatar-icon-201x200');
 }
-.main-info-el {
-    font-size: 15px;
-    margin-bottom: 13px;
+.main-info-list {
+    margin-bottom: 28px;
+    margin-left: 11px;
+    .main-info-el {
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+    .main-info-el-title {
+        font-size: 17px;
+        font-family: 'firasans-medium';
+        margin-right: 15px;
+    }
 }
-.main-info-el-title {
-    font-size: 17px;
-    font-family: 'firasans-medium';
-    margin-right: 18px;
-}
+
 .skills-title-cell {
     width: 173px;
 }
@@ -324,8 +348,10 @@
     text-align: center;
     height: 19px;
     line-height: 19px;
-    margin-right: 8px;
+    margin-right: 3px;
     color: #fff;
+    font-size: 14px;
+    font-family: 'proximanovacond-semibold';
     @include background (linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%));
     border-radius: 2px;
 }
@@ -333,7 +359,9 @@
 .footer {
     height: 80px;
     text-align: center;
-    font-size: 13px;
-    font-weight: 300;
     background: $content-bg;
+    .copyright {
+        font-size: 13px;
+        font-family: 'firasans-light';
+    }
 }

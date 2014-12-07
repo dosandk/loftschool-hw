@@ -1,0 +1,12 @@
+@import "base";
+
+@each $font-name in $proxima-nova-fonts-names {
+    @include font-face('#{$font-name}',
+        font-files(
+            '#{$proxima-nova-font-path}/#{$font-name}.woff', 'woff',
+            '#{$proxima-nova-font-path}/#{$font-name}.ttf', 'truetype',
+            '#{$proxima-nova-font-path}/#{$font-name}.svg##{$font-name}', 'svg'
+        ),
+        '#{$proxima-nova-font-path}/#{$font-name}.eot', normal, normal
+    );
+}

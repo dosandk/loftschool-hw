@@ -1,9 +1,5 @@
 @import "base";
 
-$fira-fonts-names: 'firasans-book', 'firasans-medium', 'firasans-light';
-$fira-font-path: 'fira';
-$proxima-nova-font-path: 'proxima-nova';
-
 @each $font-name in $fira-fonts-names {
     @include font-face('#{$font-name}',
         font-files(

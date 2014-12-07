@@ -1,6 +1,15 @@
 $screen-xs-min: 320;
 $screen-sm-min: 768;
 
+// colors-settings
 $content-bg: #eff3f7;
 
-$ui-sprite: sprite-map('ui/*.png', $layout: 'smart', $spacing: 10px);
+
+// fonts-settings
+$fira-fonts-names: 'firasans-book', 'firasans-medium', 'firasans-light';
+$proxima-nova-fonts-names: 'proximanovacond-semibold';
+$fira-font-path: 'fira';
+$proxima-nova-font-path: 'proxima-nova';
+
+// sprites-settings
+$ui-sprite: sprite-map('ui/*.png', $layout: 'horizontal', $spacing: 10px);
