@@ -2,7 +2,6 @@
 @import "reset";
 @import "table-scaffolding";
 
-
 .upper-case {
     text-transform: uppercase;
 }
@@ -12,10 +11,10 @@
     font-family: 'firasans-book', sans-serif;
 }
 
+// header start
 .header {
     margin-bottom: 39px;
 }
-
 .header-inner-wrapper {
     background: $content-bg;
     padding: 0 20px;
@@ -25,12 +24,19 @@
     @include breakpoint(320) {
         padding: 0 15px;
     }
-}
-
-.header-table {
-    max-width: 1200px;
-    height: 112px;
-    margin: 0 auto;
+    .header-table {
+        max-width: 1200px;
+        height: 112px;
+        margin: 0 auto;
+    }
+    .loftschool-logo-container {
+        width: 245px;
+        height: 57px;
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'loftschool-log-245x57');
+    }
     .social-links {
         display: inline-block;
         * + * {
@@ -57,20 +63,42 @@
     .gh-icon {
         @include sprite($ui-sprite, 'gh-icon-47x47', $offset-x: 0, $offset-y: 0);
     }
+}
+// header end
 
-    .loftschool-logo-container {
-        width: 245px;
-        height: 57px;
-        display: inline-block;
-        background-image: $ui-sprite;
-        background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'loftschool-log-245x57');
-    }
+// grid system settings start
+.container {
+    margin-bottom: 9px;
+    @include container();
 }
 
+.left-sidebar {
+    @include span(3 of 12 0);
+    @include breakpoint(320) {
+        @include span(12);
+    }
+    margin-right: -1%;
+}
+
+.main-content {
+        outline: 1px solid red;
+    @include span(8 of 12 0);
+    @include push(1);
+}
+.navigation-wrapper,
+.about,
+.experience,
+.education,
+.contacts-wrapper,
+.my-works {
+    margin-right: -10px;
+}
+// grid system settings end
+
+// left-sidebar start
 .navigation-wrapper {
     background: $content-bg;
-    margin-right: -10px;
+//    margin-right: -10px;
     margin-bottom: 24px;
     .navigation-el {
         height: 72px;
@@ -106,7 +134,7 @@
 }
 
 .contacts-wrapper {
-    margin-right: -10px;
+//    margin-right: -10px;
     .contacts-el {
         height: 40px;
         color: #fff;
@@ -157,25 +185,15 @@
         background: #51daf8;
     }
 }
+// left-sidebar end
 
-.shadow-gradient {
-    height: 3px;
-    background-color: #1c667a;
-    @include background(linear-gradient(90deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%));
-}
-
-.content {
-    margin: 0 auto 9px;
-    @include container();
-}
-
-
-.left-side {
-    @include span(3 of 12 0);
-    @include breakpoint(320) {
-         @include span(12);
-    }
-    margin-right: -1%;
+// main-content start
+.about,
+.experience,
+.education {
+    background: $content-bg;
+    margin-bottom: 24px;
+//    margin-right: -10px;
 }
 
 .main-info-title,
@@ -192,46 +210,91 @@
     margin-bottom: 33px;
 }
 
+.main-info-title {
+    margin-bottom: 16px;
+}
+.h1-txt {
+    display: inline-block;
+    border-bottom: 2px solid #3ba8c0;
+    padding: 0 20px;
+}
+.avatar-container-cell {
+    width: 250px;
+    text-align: center;
+}
+.avatar-container {
+    width: 201px;
+    height: 200px;
+    display: inline-block;
+    background-image: $ui-sprite;
+    @include sprite($ui-sprite, 'default-avatar-icon-201x200');
+}
+.main-info-list {
+    margin-bottom: 28px;
+    margin-left: 11px;
+    .main-info-el {
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+
+    .main-info-el-title {
+        font: 17px 'firasans-medium';
+        margin-right: 15px;
+    }
+    .skills-title-cell {
+        width: 173px;
+    }
+    .skills-list-el {
+        display: inline-block;
+        padding: 0 14px;
+        text-align: center;
+        height: 19px;
+        margin-right: 3px;
+        color: #fff;
+        font: 14px/19px 'proximanovacond-semibold';
+        @include background (linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%));
+        border-radius: 2px;
+    }
+
+}
+// main-content end
+
+// experience start
 .experience {
     overflow: hidden;
 }
-.experience-info-list {
-
-    .experience-info-list-el {
-        margin-bottom: 28px;
-        &:last-child {
-            margin-bottom: 19px;
-        }
+.experience-info-list-el {
+    margin-bottom: 28px;
+    &:last-child {
+        margin-bottom: 19px;
+    }
+    .work-date {
+        font: 15px/1.5 'firasans-light';
+    }
+    .work-icon-cell {
+        width: 100px;
+        text-align: right;
+    }
+    .work-icon {
+        display: inline-block;
+        width: 36px;
+        height: 34px;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'work-icon-36x34');
+    }
+    .company-name-info-cell {
+        padding-left: 30px;
+        color: #4a545d;
+    }
+    .company-name {
+        font-size: 17px;
+        line-height: 1;
     }
 }
+// experience end
 
-.work-date {
-    font-family: 'firasans-light';
-    font-size: 15px;
-    line-height: 1.5;
-}
-.work-icon-cell {
-    width: 100px;
-    text-align: right;
-}
-.work-icon {
-    display: inline-block;
-    width: 36px;
-    height: 34px;
-    background-image: $ui-sprite;
-    background-repeat: no-repeat;
-    @include sprite($ui-sprite, 'work-icon-36x34');
-}
-
-.company-name-info-cell {
-    padding-left: 30px;
-    color: #4a545d;
-}
-.company-name {
-    font-size: 17px;
-    line-height: 1;
-}
-
+// education start
 .education {
     overflow: hidden;
 }
@@ -272,96 +335,78 @@
         line-height: 1;
     }
     .education-date {
-        font-size: 15px;
-        font-family: 'firasans-light';
+        font: 15px 'firasans-light';
     }
 }
+// education end
 
-.main-info-title {
-    margin-bottom: 16px;
-}
-.h1-txt {
-    display: inline-block;
-    border-bottom: 2px solid #3ba8c0;
-    padding: 0 20px;
-}
-
-.right-side {
-    @include span(8 of 12 0);
-    @include push(1);
-}
-.about,
-.experience,
-.education {
-    background: $content-bg;
-    margin-bottom: 24px;
-    margin-right: -10px;
-}
-
-.about {
-
-}
-.avatar-container-cell {
-    width: 250px;
-    text-align: center;
-}
-.avatar-container {
-    width: 201px;
-    height: 200px;
-    display: inline-block;
-    background-image: $ui-sprite;
-    @include sprite($ui-sprite, 'default-avatar-icon-201x200');
-}
-.main-info-list {
-    margin-bottom: 28px;
-    margin-left: 11px;
-    .main-info-el {
-        font-size: 15px;
-        margin-bottom: 13px;
-    }
-    .main-info-el-title {
-        font-size: 17px;
-        font-family: 'firasans-medium';
-        margin-right: 15px;
-    }
-}
-
-.skills-title-cell {
-    width: 173px;
-}
-
-.experience {
-
-}
-
-.education {
-
-}
-
-.skills-list {
-
-
-}
-.skills-list-el {
-    display: inline-block;
-    padding: 0 14px;
-    text-align: center;
-    height: 19px;
-    line-height: 19px;
-    margin-right: 3px;
-    color: #fff;
-    font-size: 14px;
-    font-family: 'proximanovacond-semibold';
-    @include background (linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%));
-    border-radius: 2px;
-}
-
+// footer start
 .footer {
     height: 80px;
     text-align: center;
     background: $content-bg;
     .copyright {
-        font-size: 13px;
-        font-family: 'firasans-light';
+        font: 13px 'firasans-light';
+    }
+}
+// footer end
+
+.shadow-gradient {
+    height: 3px;
+    background-color: #1c667a;
+    @include background(linear-gradient(90deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%));
+}
+
+// MY WORKS HTML
+
+.my-works {
+    min-height: 839px;
+    background: $content-bg;
+}
+
+.project-preview-list {
+        outline: 1px solid red;
+    text-align: left;
+    padding: 0 20px;
+    margin-top: 35px;
+    margin-right: -30px;
+    .project-preview-list-el {
+        width: 183px;
+        height: 204px;
+        margin-right: 30px;
+        display: inline-block;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            background: #edf8fc;
+            border: 1px dashed #3ca9c0;
+            margin-left: 0;
+            img {
+                display: none;
+            }
+        }
+    }
+    .project-info {
+        text-align: center;
+    }
+    .project-preview {
+        width: 179px;
+        height: 125px;
+        border: 2px solid #3ba8c0;
+    }
+    .project-source {
+        font: 13px 'firasans-lightitalic';
+        color: #3ba8c0;
+    }
+    .project-description {
+        font: 15px 'firasans-light';
+        color: #4a545d;
+    }
+
+    .download-project {
+        width: 183px;
+        height: 204px;
+        display: inline-block;
     }
 }
