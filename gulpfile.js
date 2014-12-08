@@ -26,11 +26,11 @@ gulp.task('concat', ['compass'], function() {
 gulp.task('concatCss', function() {
     return gulp.src(['./dev/css/**'])
         .pipe(concat('ui.min.css'))
-        .pipe(prefix({
-            browsers: ['> 1%', 'last 2 versions', 'ie 8']
-        }))
+        //.pipe(prefix({
+        //    browsers: ['> 1%', 'last 2 versions', 'ie 8']
+        //}))
         .pipe(minify())
-        .pipe(gulp.dest('./app/css'))
+        .pipe(gulp.dest('./app/css/ui'))
         .pipe(connect.reload());
 });
 
