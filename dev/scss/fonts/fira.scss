@@ -9,4 +9,7 @@
         ),
         '#{$fira-font-path}/#{$font-name}.eot', normal, normal
     );
+    /*@include font-face('#{$font-name}',
+        inline-font-files('#{$fira-font-path}/#{$font-name}.woff', woff)
+    );*/
 }

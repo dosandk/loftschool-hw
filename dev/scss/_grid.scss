@@ -2,14 +2,14 @@
 
 $susy: (
     columns: 12,
-    gutters: 10,
+    gutters: 0,
     container: 60em,
     math: fluid,
     output: float,
     gutter-position: inside,
 
     debug: (
-        //image: show,
+//        image: show,
         image: hide,
         color: rgba(#66f, .5),
         output: background,

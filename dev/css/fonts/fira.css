@@ -5,6 +5,9 @@
   font-weight: normal;
   font-style: normal;
 }
+/*@include font-face('firasans-book',
+    inline-font-files('fira/firasans-book.woff', woff)
+);*/
 @font-face {
   font-family: "firasans-medium";
   src: url('../../fonts/fira/firasans-medium.eot?1417642872');
@@ -12,6 +15,19 @@
   font-weight: normal;
   font-style: normal;
 }
+/*@include font-face('firasans-medium',
+    inline-font-files('fira/firasans-medium.woff', woff)
+);*/
+@font-face {
+  font-family: "firasans-light";
+  src: url('../../fonts/fira/firasans-light.eot?1417642872');
+  src: url('../../fonts/fira/firasans-light.eot?&1417642872#iefix') format('embedded-opentype'), url('../../fonts/fira/firasans-light.woff?1417642872') format('woff'), url('../../fonts/fira/firasans-light.ttf?1417642872') format('truetype'), url('../../fonts/fira/firasans-light.svg#firasans-light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*@include font-face('firasans-light',
+    inline-font-files('fira/firasans-light.woff', woff)
+);*/
 @font-face {
   font-family: "firasans-lightitalic";
   src: url('../../fonts/fira/firasans-lightitalic.eot?1417642872');
@@ -19,10 +35,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "firasans-lightitalic";
-  src: url('../../fonts/fira/firasans-lightitalic.eot?1417642872');
-  src: url('../../fonts/fira/firasans-lightitalic.eot?&1417642872#iefix') format('embedded-opentype'), url('../../fonts/fira/firasans-lightitalic.woff?1417642872') format('woff'), url('../../fonts/fira/firasans-lightitalic.ttf?1417642872') format('truetype'), url('../../fonts/fira/firasans-lightitalic.svg#firasans-lightitalic') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+/*@include font-face('firasans-lightitalic',
+    inline-font-files('fira/firasans-lightitalic.woff', woff)
+);*/

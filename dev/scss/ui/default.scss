@@ -7,7 +7,7 @@
 }
 
 .main-container {
-    background: #fff url(../../img/separated/page-bg-671x669.png);
+    background: inline-image('separated/page-bg-671x669.png');
     font-family: 'firasans-book', sans-serif;
 }
 
@@ -81,7 +81,6 @@
 }
 
 .main-content {
-        outline: 1px solid red;
     @include span(8 of 12 0);
     @include push(1);
 }
@@ -360,7 +359,9 @@
 // MY WORKS HTML
 
 .my-works {
-    min-height: 839px;
+//    min-height: 839px;
+    margin-bottom: 39px;
+    overflow: hidden;
     background: $content-bg;
 }
 
