@@ -28,6 +28,10 @@ ul li {
   display: table;
 }
 
+.display-inline-table {
+  display: inline-table;
+}
+
 .display-table-row {
   display: table-row;
 }
@@ -493,48 +497,55 @@ ul li {
   background: #eff3f7;
 }
 
-.project-preview-list {
-  outline: 1px solid red;
-  text-align: left;
-  padding: 0 20px;
-  margin-top: 35px;
-  margin-right: -30px;
+.gallery {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  margin-top: 17px;
 }
-.project-preview-list .project-preview-list-el {
-  width: 183px;
-  height: 204px;
-  margin-right: 30px;
-  display: inline-block;
-}
-.project-preview-list .project-preview-list-el:first-child {
-  margin-left: 0;
-}
-.project-preview-list .project-preview-list-el:last-child {
-  background: #edf8fc;
-  border: 1px dashed #3ca9c0;
-  margin-left: 0;
-}
-.project-preview-list .project-preview-list-el:last-child img {
-  display: none;
-}
-.project-preview-list .project-info {
+.gallery .gallery-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
   text-align: center;
+  margin-bottom: 35px;
 }
-.project-preview-list .project-preview {
+.gallery .project-preview {
   width: 179px;
   height: 125px;
+  display: inline-block;
   border: 2px solid #3ba8c0;
 }
-.project-preview-list .project-source {
+.gallery .project-info {
+  text-align: center;
+}
+.gallery .project-source {
   font: 13px 'firasans-lightitalic';
   color: #3ba8c0;
 }
-.project-preview-list .project-description {
+.gallery .project-description {
   font: 15px 'firasans-light';
   color: #4a545d;
 }
-.project-preview-list .download-project {
-  width: 183px;
-  height: 204px;
+.gallery .download-project-btn {
+  width: 179px;
+  height: 125px;
+  background: #edf8fc;
+  border: 1px dashed #3ca9c0;
+}
+.gallery .download-project-icon {
+  width: 32px;
+  height: 32px;
   display: inline-block;
+  background-image: url('../../img/spritesheets/ui-s4dd7ccdc4d.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.gallery .add-project-btn-txt {
+  color: #3ba8c0;
+  font: 13px 'firasans-lightitalic';
 }
