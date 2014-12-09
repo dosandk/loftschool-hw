@@ -1,0 +1,51 @@
+@import "base";
+
+.my-works {
+    margin-bottom: 39px;
+    overflow: hidden;
+    background: $content-bg;
+}
+
+.gallery {
+    @include span(12);
+    margin-top: 17px;
+    .gallery-item {
+        @include span(4);
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .project-preview {
+        width: 179px;
+        height: 125px;
+        display: inline-block;
+        border: 2px solid #3ba8c0;
+    }
+    .project-info {
+        text-align: center;
+    }
+    .project-source {
+        font: 13px 'firasans-lightitalic';
+        color: #3ba8c0;
+    }
+    .project-description {
+        font: 15px 'firasans-light';
+        color: #4a545d;
+    }
+
+    .download-project-btn {
+        width: 179px;
+        height: 125px;
+        background: #edf8fc;
+        border: 1px dashed #3ca9c0;
+    }
+    .download-project-icon {
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'add-project-icon-32x32', true);
+    }
+    .add-project-btn-txt {
+        color: #3ba8c0;
+        font: 13px 'firasans-lightitalic';
+    }
+}

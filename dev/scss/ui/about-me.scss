@@ -1,0 +1,146 @@
+@import "base";
+
+// main-content start
+.about,
+.experience,
+.education {
+    background: $content-bg;
+    margin-bottom: 24px;
+    //    margin-right: -10px;
+}
+
+.main-info-title,
+.experience-title,
+.education-title {
+    height: 69px;
+    line-height: 66px;
+    font-size: 27px;
+    color: #3ba8c0;
+}
+
+.experience-title,
+.education-title {
+    margin-bottom: 33px;
+}
+
+.main-info-title {
+    margin-bottom: 16px;
+}
+.h1-txt {
+    display: inline-block;
+    border-bottom: 2px solid #3ba8c0;
+    padding: 0 20px;
+}
+.avatar-container-cell {
+    width: 250px;
+    text-align: center;
+}
+.avatar-container {
+    display: inline-block;
+    background-image: $ui-sprite;
+    @include sprite($ui-sprite, 'default-avatar-icon-201x200', true);
+}
+.main-info-list {
+    margin-bottom: 28px;
+    margin-left: 11px;
+    .main-info-el {
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+
+    .main-info-el-title {
+        font: 17px 'firasans-medium';
+        margin-right: 15px;
+    }
+    .skills-title-cell {
+        width: 173px;
+    }
+    .skills-list-el {
+        display: inline-block;
+        padding: 0 14px;
+        text-align: center;
+        height: 19px;
+        margin-right: 3px;
+        color: #fff;
+        font: 14px/19px 'proximanovacond-semibold';
+        @include background (linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%));
+        border-radius: 2px;
+    }
+
+}
+// main-content end
+
+// experience start
+.experience {
+    overflow: hidden;
+}
+.experience-info-list-el {
+    margin-bottom: 28px;
+    &:last-child {
+        margin-bottom: 19px;
+    }
+    .work-date {
+        font: 15px/1.5 'firasans-light';
+    }
+    .work-icon-cell {
+        width: 100px;
+        text-align: right;
+    }
+    .work-icon {
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'work-icon-36x34', true);
+    }
+    .company-name-info-cell {
+        padding-left: 30px;
+        color: #4a545d;
+    }
+    .company-name {
+        font-size: 17px;
+        line-height: 1;
+    }
+}
+// experience end
+
+// education start
+.education {
+    overflow: hidden;
+}
+.education-info-list {
+    .education-info-list-el {
+        color: #4a545d;
+        margin-bottom: 26px;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+    .education-icon-cell {
+        width: 100px;
+        text-align: right;
+        vertical-align: 36px;
+    }
+    .education-icon {
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'education-icon-41x23', true);
+    }
+    .courses-icon {
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'courses-icon-41x32', true);
+    }
+    .education-palace-cell {
+        padding-left: 30px;
+    }
+    .education-palace {
+        font-size: 17px;
+        line-height: 1;
+    }
+    .education-date {
+        font: 15px 'firasans-light';
+    }
+}
+// education end
