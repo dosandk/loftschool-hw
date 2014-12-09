@@ -5,6 +5,9 @@
 .upper-case {
     text-transform: uppercase;
 }
+.hide {
+    display: none;
+}
 
 .main-container {
     background: inline-image('separated/page-bg-671x669.png');
@@ -30,12 +33,10 @@
         margin: 0 auto;
     }
     .loftschool-logo-container {
-        width: 245px;
-        height: 57px;
         display: inline-block;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'loftschool-log-245x57');
+        @include sprite($ui-sprite, 'loftschool-log-245x57', true);
     }
     .social-links {
         display: inline-block;
@@ -52,16 +53,16 @@
         background-repeat: no-repeat;
     }
     .vk-icon {
-        @include sprite($ui-sprite, 'vk-icon-46x46', $offset-x: 0, $offset-y: 0);
+        @include sprite($ui-sprite, 'vk-icon-47x47', $dimensions: false,  $offset-x: 0, $offset-y: 0);
     }
     .tw-icon {
-        @include sprite($ui-sprite, 'tw-icon-47x47', $offset-x: 0, $offset-y: 0);
+        @include sprite($ui-sprite, 'tw-icon-47x47', $dimensions: false, $offset-x: 0, $offset-y: 0);
     }
     .fb-icon {
-        @include sprite($ui-sprite, 'fb-icon-47x47', $offset-x: 0, $offset-y: 0);
+        @include sprite($ui-sprite, 'fb-icon-47x47', $dimensions: false, $offset-x: 0, $offset-y: 0);
     }
     .gh-icon {
-        @include sprite($ui-sprite, 'gh-icon-47x47', $offset-x: 0, $offset-y: 0);
+        @include sprite($ui-sprite, 'gh-icon-47x47', $dimensions: false, $offset-x: 0, $offset-y: 0);
     }
 }
 // header end
@@ -151,19 +152,13 @@
         background-repeat: no-repeat;
     }
     .mail-icon {
-        width: 21px;
-        height: 16px;
-        @include sprite($ui-sprite, 'mail-icon-21x16');
+        @include sprite($ui-sprite, 'mail-icon-21x16', true);
     }
     .phone-icon {
-        width: 19px;
-        height: 21px;
-        @include sprite($ui-sprite, 'phone-icon-19x21');
+        @include sprite($ui-sprite, 'phone-icon-19x21', true);
     }
     .skype-icon {
-        width: 20px;
-        height: 20px;
-        @include sprite($ui-sprite, 'skype-icon-20x20');
+        @include sprite($ui-sprite, 'skype-icon-20x20', true);
     }
     .contacts-title {
         background: #3ba8c0;
@@ -223,11 +218,9 @@
     text-align: center;
 }
 .avatar-container {
-    width: 201px;
-    height: 200px;
     display: inline-block;
     background-image: $ui-sprite;
-    @include sprite($ui-sprite, 'default-avatar-icon-201x200');
+    @include sprite($ui-sprite, 'default-avatar-icon-201x200', true);
 }
 .main-info-list {
     margin-bottom: 28px;
@@ -277,11 +270,9 @@
     }
     .work-icon {
         display: inline-block;
-        width: 36px;
-        height: 34px;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'work-icon-36x34');
+        @include sprite($ui-sprite, 'work-icon-36x34', true);
     }
     .company-name-info-cell {
         padding-left: 30px;
@@ -312,20 +303,16 @@
         vertical-align: 36px;
     }
     .education-icon {
-        width: 41px;
-        height: 23px;
         display: inline-block;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'education-icon-41x23');
+        @include sprite($ui-sprite, 'education-icon-41x23', true);
     }
     .courses-icon {
-        width: 41px;
-        height: 32px;
         display: inline-block;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'courses-icon-41x32');
+        @include sprite($ui-sprite, 'courses-icon-41x32', true);
     }
     .education-palace-cell {
         padding-left: 30px;
@@ -398,12 +385,10 @@
         border: 1px dashed #3ca9c0;
     }
     .download-project-icon {
-        width: 32px;
-        height: 32px;
         display: inline-block;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'add-project-icon-32x32');
+        @include sprite($ui-sprite, 'add-project-icon-32x32', true);
     }
     .add-project-btn-txt {
         color: #3ba8c0;
@@ -454,32 +439,11 @@
             height: 30px;
             border: 1px solid #48cbe8;
         }
-        .form-input-wrapper {
-            height: 39px;
-            border: 1px solid #48cbe8;
-        }
-        .form-input {
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            text-indent: 9px;
-            @include input-placeholder {
-                color: #48cbe8;
-            }
-        }
-        .form-taxtarea-wrapper {
-            border: 1px solid #48cbe8;
+        .contacts-textarea-form-wrapper {
             height: 181px;
-            background: #fff;
         }
-        .form-taxtarea {
-            width: 100%;
-            height: 100%;
+        .contacts-textarea {
             padding: 13px 9px 10px;
-            box-sizing: border-box;
-            @include input-placeholder {
-                color: #48cbe8;
-            }
         }
         .capture-container {
             width: 189px;
@@ -506,6 +470,112 @@
             background:  #849db5;
             box-shadow: 0px 2px 0 0px rgba(104,123,143, 1);
         }
+    }
+
+}
+
+.form-input-wrapper,
+.form-taxtarea-wrapper {
+    border: 1px solid #48cbe8;
+}
+.form-input-wrapper {
+    height: 39px;
+}
+.form-taxtarea-wrapper {
+    background: #fff;
+}
+.form-input,
+.form-taxtarea {
+    width: 100%;
+    height: 100%;
+    font: 13px 'firasans-lightans';
+    @include input-placeholder {
+        color: #48cbe8;
+    }
+}
+.form-input {
+    display: inline-block;
+    text-indent: 9px;
+}
+.form-taxtarea {
+    box-sizing: border-box;
+}
+
+// popup
+
+.modal-overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.add-project-popup {
+    width: 362px;
+    height: 482px;
+    position: absolute;
+    top: 50%;
+    margin-top: -241px;
+    left: 50%;
+    margin-left: -181px;
+    background-color:  #eff3f7;
+    box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
+    box-sizing: border-box;
+
+    .add-project-form-label {
+        font-size: 17px;
+        color: #959aa8;
+    }
+
+    .project-popup-content {
+        padding: 7px 21px;
+    }
+
+    .add-project-popup-header {
+        background: #48cbe8;
+        padding: 0 12px;
+    }
+    .add-project-popup-title {
+        height: 44px;
+        font: 25px 'firasans-regular';
+        color: #fff;
+    }
+    .project-popup-close-btn {
+        line-height: 1;
+        display: inline-block;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        @include sprite($ui-sprite, 'add-project-popup-close-btn-25x25', true);
+    }
+    .project-popup-form-fieldset {
+        margin-bottom: 7px;
+    }
+    .header-bottom-border {
+        height: 9px;
+        background: #67dffa;
+    }
+    .project-textarea-wrapper {
+        height: 94px;
+        padding: 10px 9px 6px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
+    .project-textarea {
+        border-radius: 4px;
+    }
+
+    .submit-project {
+        height: 31px;
+        padding: 0 26px;
+        font-size: 19px;
+        background: #48cbe8;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
 }
