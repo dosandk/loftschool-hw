@@ -480,6 +480,7 @@
 }
 .form-input-wrapper {
     height: 39px;
+    border-radius: 4px;
 }
 .form-taxtarea-wrapper {
     background: #fff;
@@ -576,6 +577,16 @@
         color: #fff;
         border-radius: 5px;
         cursor: pointer;
+    }
+
+    .download-img-btn-cell {
+        width: 52px;
+    }
+    .download-img-btn {
+        cursor: pointer;
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        @include sprite($ui-sprite, 'add-project-popup-download-btn-52x39');
     }
 
 }

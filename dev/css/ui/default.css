@@ -34,7 +34,8 @@ textarea {
   overflow-y: auto;
 }
 
-input {
+input,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -151,7 +152,7 @@ input {
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -660px 0;
+  background-position: -722px 0;
   height: 57px;
   width: 245px;
 }
@@ -170,28 +171,28 @@ input {
   background-repeat: no-repeat;
 }
 .header-inner-wrapper .vk-icon {
-  background-position: -1175px 0;
+  background-position: -1237px 0;
 }
 .header-inner-wrapper .vk-icon:hover, .header-inner-wrapper .vk-icon.vk-icon-47x47-hover {
-  background-position: -1232px 0;
+  background-position: -1294px 0;
 }
 .header-inner-wrapper .tw-icon {
-  background-position: -1005px 0;
+  background-position: -1067px 0;
 }
 .header-inner-wrapper .tw-icon:hover, .header-inner-wrapper .tw-icon.tw-icon-47x47-hover {
-  background-position: -1062px 0;
+  background-position: -1124px 0;
 }
 .header-inner-wrapper .fb-icon {
-  background-position: -432px 0;
+  background-position: -494px 0;
 }
 .header-inner-wrapper .fb-icon:hover, .header-inner-wrapper .fb-icon.fb-icon-47x47-hover {
-  background-position: -489px 0;
+  background-position: -551px 0;
 }
 .header-inner-wrapper .gh-icon {
-  background-position: -546px 0;
+  background-position: -608px 0;
 }
 .header-inner-wrapper .gh-icon:hover, .header-inner-wrapper .gh-icon.gh-icon-47x47-hover {
-  background-position: -603px 0;
+  background-position: -665px 0;
 }
 
 .container {
@@ -304,17 +305,17 @@ input {
   background-repeat: no-repeat;
 }
 .contacts-wrapper .mail-icon {
-  background-position: -915px 0;
+  background-position: -977px 0;
   height: 16px;
   width: 21px;
 }
 .contacts-wrapper .phone-icon {
-  background-position: -946px 0;
+  background-position: -1008px 0;
   height: 21px;
   width: 19px;
 }
 .contacts-wrapper .skype-icon {
-  background-position: -975px 0;
+  background-position: -1037px 0;
   height: 20px;
   width: 20px;
 }
@@ -386,7 +387,7 @@ input {
 .avatar-container {
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
-  background-position: -170px 0;
+  background-position: -232px 0;
   height: 200px;
   width: 201px;
 }
@@ -442,7 +443,7 @@ input {
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -1289px 0;
+  background-position: -1351px 0;
   height: 34px;
   width: 36px;
 }
@@ -475,7 +476,7 @@ input {
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -381px 0;
+  background-position: -443px 0;
   height: 23px;
   width: 41px;
 }
@@ -483,7 +484,7 @@ input {
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -119px 0;
+  background-position: -181px 0;
   height: 32px;
   width: 41px;
 }
@@ -659,6 +660,7 @@ input {
 
 .form-input-wrapper {
   height: 39px;
+  border-radius: 4px;
 }
 
 .form-taxtarea-wrapper {
@@ -769,4 +771,13 @@ input {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+}
+.add-project-popup .download-img-btn-cell {
+  width: 52px;
+}
+.add-project-popup .download-img-btn {
+  cursor: pointer;
+  background-image: url('../../img/spritesheets/ui.png');
+  background-repeat: no-repeat;
+  background-position: -119px 0;
 }

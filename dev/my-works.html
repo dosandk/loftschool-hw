@@ -7,8 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="favicon-logo-32x32.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon-logo-32x32.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-logo-16x16.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-logo-16x16.ico" type="image/x-icon">
 
     <link type="text/css" rel="stylesheet" href="css/ui/default.css"/>
     <link type="text/css" rel="stylesheet" href="css/fonts/fira.css"/>
@@ -210,7 +210,14 @@
                         <fieldset class="project-popup-form-fieldset">
                             <div><label for="project-img" class="add-project-form-label">Картинка проекта</label></div>
                             <div class="form-input-wrapper">
-                                <input id="project-img" class="form-input" placeholder="Загрузите изображение" type="text"/>
+                                <div class="display-table parent-size">
+                                    <div class="display-table-cell">
+                                        <input id="project-img" class="form-input" placeholder="Загрузите изображение" type="text"/>
+                                    </div>
+                                    <div class="display-table-cell download-img-btn-cell">
+                                        <button class="download-img-btn parent-size vertical-align-middle"></button>
+                                    </div>
+                                </div>
                             </div>
                         </fieldset>
                         <fieldset class="project-popup-form-fieldset">
