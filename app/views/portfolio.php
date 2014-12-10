@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vladimir Shevchuk – Homework 1 (loftschool december 2014) </title>
+    <title>Vladimir Shevchuk | Homework 1 (loftschool december 2014) </title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="favicon-logo-32x32.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon-logo-32x32.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-logo-16x16.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-logo-16x16.ico" type="image/x-icon">
 
     <link type="text/css" rel="stylesheet" href="css/ui/ui.min.css"/>
 
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="js/libs/html5js/html5.js"></script>
+        <script type="text/javascript" src="js/libs/html5js/html5.js"></script>
+        <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
     <![endif]-->
 </head>
 
 <body>
     <section class="main-container">
-        <?php include($_SERVER['DOCUMENT_ROOT'].'/views/templates/header.php'); ?>
+        <?php include(TEMPLATES.'header.php'); ?>
 
         <section class="container">
 
-            <?php include($_SERVER['DOCUMENT_ROOT'].'/views/templates/navigation.php'); ?>
+            <?php include(TEMPLATES.'navigation.php'); ?>
 
             <section class="main-content">
-                <article class="about">
+                <!--<article class="about">
                     <header>
                         <h1 class="main-info-title">
                             <span class="h1-txt">Основная информация</span>
@@ -147,12 +148,15 @@
                             </div>
                         </li>
                     </ul>
-                </article>
-            </section>
+                </article>-->
+
+                <?php include(TEMPLATES.$view.'.php'); ?>
+
+             </section>
 
         </section>
 
-        <?php include($_SERVER['DOCUMENT_ROOT'].'/views/templates/footer.php'); ?>
+        <?php include(TEMPLATES.'footer.php'); ?>
     </section>
 </body>
 </html>

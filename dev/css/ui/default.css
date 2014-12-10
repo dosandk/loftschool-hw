@@ -364,6 +364,7 @@ button {
   background: -moz-linear-gradient(0deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%);
   background: -webkit-linear-gradient(0deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%);
   background: linear-gradient(90deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%);
+  background-image: url(../../img/separated/header-bottom-.shadow-1400x3.png);
 }
 
 .form-input-wrapper,

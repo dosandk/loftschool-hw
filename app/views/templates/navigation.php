@@ -3,17 +3,17 @@
         <nav>
             <ul>
                 <li class="navigation-el active">
-                    <a class="navigation-link" href="about-me.html">
+                    <a class="navigation-link" href="?view=about-me">
                         Обо мне
                     </a>
                 </li>
                 <li class="navigation-el">
-                    <a class="navigation-link" href="my-works.html">
+                    <a class="navigation-link" href="?view=my-works">
                         Мои работы
                     </a>
                 </li>
                 <li class="navigation-el">
-                    <a class="navigation-link" href="contacts.html">
+                    <a class="navigation-link" href="?view=contacts">
                         Связаться со мной
                     </a>
                 </li>

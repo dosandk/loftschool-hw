@@ -1,0 +1,58 @@
+.my-works {
+  margin-bottom: 39px;
+  overflow: hidden;
+  background: #eff3f7;
+}
+
+.gallery {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  margin-top: 17px;
+}
+.gallery .gallery-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.gallery .project-preview {
+  width: 179px;
+  height: 125px;
+  display: inline-block;
+  border: 2px solid #3ba8c0;
+}
+.gallery .project-info {
+  text-align: center;
+}
+.gallery .project-source {
+  font: 13px 'firasans-lightitalic';
+  color: #3ba8c0;
+}
+.gallery .project-description {
+  font: 15px 'firasans-light';
+  color: #4a545d;
+}
+.gallery .download-project-btn {
+  width: 179px;
+  height: 125px;
+  background: #edf8fc;
+  border: 1px dashed #3ca9c0;
+}
+.gallery .download-project-icon {
+  display: inline-block;
+  background-image: url('../../img/spritesheets/ui.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+.gallery .add-project-btn-txt {
+  color: #3ba8c0;
+  font: 13px 'firasans-lightitalic';
+}
