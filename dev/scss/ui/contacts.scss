@@ -1,11 +1,12 @@
 @import "base";
 
 .contacts {
-    margin-bottom: 39px;
+    margin: 0 0 39px 0;
     overflow: hidden;
     background: $content-bg;
+    @include border-radius(4px);
     .contacts-header {
-        margin-bottom: 45px;
+        margin: 0 0 45px 0;
     }
     .contacts-header-title-table {
         width: 100%;
@@ -25,10 +26,10 @@
         margin-bottom: 35px;
 
         .fieldset {
-            margin-bottom: 15px;
+            margin: 0 0 15px 0;
         }
         .contact-form-fields-group {
-            margin-bottom: 35px;
+            margin: 0 0 35px 0;
         }
         .two-col-gag {
             width: 18px;

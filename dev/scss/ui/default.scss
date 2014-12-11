@@ -16,7 +16,7 @@
 
 // header start
 .header {
-    margin-bottom: 39px;
+    margin: 0 0 39px 0;
 }
 .header-inner-wrapper {
     background: $content-bg;
@@ -41,7 +41,7 @@
     .social-links {
         display: inline-block;
         * + * {
-            margin-left: 24px;
+            margin: 0 0 0 24px;
         }
     }
     .social-icon {
@@ -64,12 +64,17 @@
     .gh-icon {
         @include sprite($ui-sprite, 'gh-icon-47x47', $dimensions: false, $offset-x: 0, $offset-y: 0);
     }
+    .social-icon-link {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 }
 // header end
 
 // grid system settings start
 .container {
-    margin-bottom: 9px;
+    margin: 0 0 9px 0;
     @include container();
 }
 
@@ -99,14 +104,15 @@
 // left-sidebar start
 .navigation-wrapper {
     background: $content-bg;
-//    margin-right: -10px;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
+    overflow: hidden;
+    @include border-radius(4px);
     .navigation-el {
         height: 72px;
         line-height: 76px;
         color: #959aa8;
         font-size: 21px;
-        padding: 0 10px;
+        padding: 0 10px 4px;
         &.active {
             color: #fff;
             background: #3ba8c0;
@@ -135,7 +141,8 @@
 }
 
 .contacts-wrapper {
-//    margin-right: -10px;
+    @include border-radius(4px);
+    overflow: hidden;
     .contacts-el {
         height: 40px;
         color: #fff;
@@ -143,7 +150,7 @@
     .contact-icon-cell {
         width: 62px;
         text-align: right;
-        padding-right: 21px;
+        padding: 0 21px 0 0;
     }
     .contact-icon {
         display: inline-block;
@@ -182,6 +189,19 @@
 }
 // left-sidebar end
 
+.main-info-title {
+    height: 69px;
+    line-height: 66px;
+    font-size: 27px;
+    color: #3ba8c0;
+    margin: 0 0 16px 0;
+}
+.h1-txt {
+    display: inline-block;
+    border-bottom: 2px solid #3ba8c0;
+    padding: 0 20px;
+}
+
 // footer start
 .footer {
     height: 80px;
@@ -195,9 +215,8 @@
 
 .shadow-gradient {
     height: 3px;
-    background-color: #1c667a;
+    @include filter-gradient(#1c667a, #f2f6fa, 'top');
     @include background(linear-gradient(90deg, #1c667a 0%, #f6fafe 0%, #d8d8d8 0%, #f2f6fa 0%, #b6ced6 28%, #1c667a 48%, #b4ccd5 71%, #f2f6fa 100%));
-    background-image: url(../../img/separated/header-bottom-.shadow-1400x3.png);
 }
 
 .form-input-wrapper,
@@ -206,7 +225,7 @@
 }
 .form-input-wrapper {
     height: 39px;
-    border-radius: 4px;
+    @include border-radius(4px);
 }
 .form-taxtarea-wrapper {
     background: #fff;
@@ -225,7 +244,7 @@
     text-indent: 9px;
 }
 .form-taxtarea {
-    box-sizing: border-box;
+    @include box-sizing(border-box);
 }
 
 // popup
@@ -236,6 +255,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    zoom: 1;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#393939',endColorstr='#393939');
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -244,13 +265,13 @@
     height: 482px;
     position: absolute;
     top: 50%;
-    margin-top: -241px;
     left: 50%;
-    margin-left: -181px;
+    margin: -241px 0 0 -181px;
     background-color:  #eff3f7;
     box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
-    box-sizing: border-box;
-
+    @include box-sizing(border-box);
+    @include border-radius(4px);
+    overflow: hidden;
     .add-project-form-label {
         font-size: 17px;
         color: #959aa8;
@@ -278,7 +299,7 @@
         @include sprite($ui-sprite, 'add-project-popup-close-btn-25x25', true);
     }
     .project-popup-form-fieldset {
-        margin-bottom: 7px;
+        margin: 0 0 7px 0;
     }
     .header-bottom-border {
         height: 9px;
@@ -287,11 +308,11 @@
     .project-textarea-wrapper {
         height: 94px;
         padding: 10px 9px 6px;
-        margin-bottom: 8px;
-        border-radius: 4px;
+        margin: 0 0 8px 0;
+        @include border-radius(4px);
     }
     .project-textarea {
-        border-radius: 4px;
+        @include border-radius(4px);
     }
 
     .submit-project {
@@ -300,7 +321,7 @@
         font-size: 19px;
         background: #48cbe8;
         color: #fff;
-        border-radius: 5px;
+        @include border-radius(5px);
         cursor: pointer;
     }
 

@@ -5,8 +5,9 @@
 .experience,
 .education {
     background: $content-bg;
-    margin-bottom: 24px;
-    //    margin-right: -10px;
+    margin: 0 0 24px 0;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .main-info-title,
@@ -20,17 +21,9 @@
 
 .experience-title,
 .education-title {
-    margin-bottom: 33px;
+    margin: 0 0 33px 0;
 }
 
-.main-info-title {
-    margin-bottom: 16px;
-}
-.h1-txt {
-    display: inline-block;
-    border-bottom: 2px solid #3ba8c0;
-    padding: 0 20px;
-}
 .avatar-container-cell {
     width: 250px;
     text-align: center;
@@ -41,16 +34,15 @@
     @include sprite($ui-sprite, 'default-avatar-icon-201x200', true);
 }
 .main-info-list {
-    margin-bottom: 28px;
-    margin-left: 11px;
+    margin: 0 0 28px 11px;
     .main-info-el {
         font-size: 15px;
-        margin-bottom: 13px;
+        margin: 0 0 13px 0;
     }
 
     .main-info-el-title {
         font: 17px 'firasans-medium';
-        margin-right: 15px;
+        margin: 0 15px 0 0;
     }
     .skills-title-cell {
         width: 173px;
@@ -60,9 +52,10 @@
         padding: 0 14px;
         text-align: center;
         height: 19px;
-        margin-right: 3px;
+        margin: 0 3px 0 0;
         color: #fff;
         font: 14px/19px 'proximanovacond-semibold';
+        @include filter-gradient(#2e8ca2, #3ba8c0, 'radial');
         @include background (linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%));
         border-radius: 2px;
     }
@@ -73,11 +66,12 @@
 // experience start
 .experience {
     overflow: hidden;
+    @include border-radius(4px);
 }
 .experience-info-list-el {
-    margin-bottom: 28px;
+    margin: 0 0 28px 0;
     &:last-child {
-        margin-bottom: 19px;
+        margin: 0 0 19px 0;
     }
     .work-date {
         font: 15px/1.5 'firasans-light';
@@ -93,7 +87,7 @@
         @include sprite($ui-sprite, 'work-icon-36x34', true);
     }
     .company-name-info-cell {
-        padding-left: 30px;
+        padding: 0 0 0 30px;
         color: #4a545d;
     }
     .company-name {
@@ -106,13 +100,14 @@
 // education start
 .education {
     overflow: hidden;
+    @include border-radius(4px);
 }
 .education-info-list {
     .education-info-list-el {
         color: #4a545d;
-        margin-bottom: 26px;
+        margin: 0 0 26px 0;
         &:last-child {
-            margin-bottom: 20px;
+            margin: 0 0 20px 0;
         }
     }
     .education-icon-cell {
@@ -133,7 +128,7 @@
         @include sprite($ui-sprite, 'courses-icon-41x32', true);
     }
     .education-palace-cell {
-        padding-left: 30px;
+        padding: 0 0 0 30px;
     }
     .education-palace {
         font-size: 17px;

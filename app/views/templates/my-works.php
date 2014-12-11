@@ -8,7 +8,7 @@
     <div class="gallery">
         <div class="gallery-item">
             <figure>
-                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt=""/>
+                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="project"/>
                 <figcaption class="project-info">
                     <div class="project-source">www.site.ru</div>
                     <div class="project-description">
@@ -19,7 +19,7 @@
         </div>
         <div class="gallery-item">
             <figure>
-                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt=""/>
+                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="project"/>
                 <figcaption class="project-info">
                     <div class="project-source">www.site.ru</div>
                     <div class="project-description">
@@ -30,7 +30,7 @@
         </div>
         <div class="gallery-item">
             <figure>
-                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt=""/>
+                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="project"/>
                 <figcaption class="project-info">
                     <div class="project-source">www.site.ru</div>
                     <div class="project-description">
@@ -41,7 +41,7 @@
         </div>
         <div class="gallery-item">
             <figure>
-                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt=""/>
+                <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="project"/>
                 <figcaption class="project-info">
                     <div class="project-source">www.site.ru</div>
                     <div class="project-description">
@@ -61,7 +61,7 @@
     </div>
 </article>
 
-<div class="modal-overlay hide">
+<div class="modal-overlay">
     <div class="add-project-popup">
         <header class="add-project-popup-header">
             <div class="display-table parent-width add-project-popup-title">

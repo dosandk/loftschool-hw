@@ -2,7 +2,8 @@
 
     define('TEMPLATES', $_SERVER['DOCUMENT_ROOT'].'/views/templates/');
 
-    define('MYSQL_HOST', '');
-    define('MYSQL_USER', '');
-    define('MYSQL_PASS', '');
-    define('MYSQL_DB',   '');
+    define("DB_HOST", "localhost");
+    define("DB_USER", "root");
+    define("DB_PSWD", "Luh5u63hmb");
+    define("DB_NAME", "table");
+

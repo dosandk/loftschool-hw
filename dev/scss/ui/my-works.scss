@@ -4,6 +4,7 @@
     margin-bottom: 39px;
     overflow: hidden;
     background: $content-bg;
+    @include border-radius(4px);
 }
 
 .gallery {

@@ -1,10 +1,13 @@
 .contacts {
-  margin-bottom: 39px;
+  margin: 0 0 39px 0;
   overflow: hidden;
   background: #eff3f7;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 .contacts .contacts-header {
-  margin-bottom: 45px;
+  margin: 0 0 45px 0;
 }
 .contacts .contacts-header-title-table {
   width: 100%;
@@ -28,10 +31,10 @@
   margin-bottom: 35px;
 }
 .contacts .contact-form-wrapper .fieldset {
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
 }
 .contacts .contact-form-wrapper .contact-form-fields-group {
-  margin-bottom: 35px;
+  margin: 0 0 35px 0;
 }
 .contacts .contact-form-wrapper .two-col-gag {
   width: 18px;
