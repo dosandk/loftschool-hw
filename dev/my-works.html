@@ -15,11 +15,20 @@
     <link type="text/css" rel="stylesheet" href="css/fonts/fira.css"/>
     <link type="text/css" rel="stylesheet" href="css/fonts/proxima-nova.css"/>
 
+    <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/libs/html5js/html5.js"></script>
     <![endif]-->
 </head>
 <body>
+<script>
+    $(function() {
+        app.initialize();
+    });
+</script>
     <section class="main-container">
         <header class="header">
             <div class="header-inner-wrapper">
@@ -199,21 +208,23 @@
                 <div class="header-bottom-border">&nbsp;</div>
 
                 <div class="project-popup-content">
-                    <form action="">
+                    <form id="add-project-form" action="javascript:void(0);" method="post">
                         <fieldset class="project-popup-form-fieldset">
                             <div>
                                 <label for="project-name" class="add-project-form-label">Название проекта</label>
                             </div>
-                            <div class="form-input-wrapper">
-                                <input id="project-name" class="form-input" placeholder="Введите название" type="text"/>
+                            <div class="contact-form-input-wrapper">
+                                <input id="project-name" class="contact-form-input" name="projectName" placeholder="Введите название" type="text"/>
+                                <div class="error-wrapper"></div>
                             </div>
                         </fieldset>
                         <fieldset class="project-popup-form-fieldset">
                             <div><label for="project-img" class="add-project-form-label">Картинка проекта</label></div>
-                            <div class="form-input-wrapper">
+                            <div class="contact-form-input-wrapper">
                                 <div class="display-table parent-size">
                                     <div class="display-table-cell">
-                                        <input id="project-img" class="form-input" placeholder="Загрузите изображение" type="text"/>
+                                        <input id="project-img" class="contact-form-input" name="projectImg" placeholder="Загрузите изображение" type="text"/>
+                                        <div class="error-wrapper"></div>
                                     </div>
                                     <div class="display-table-cell download-img-btn-cell">
                                         <button class="download-img-btn parent-size vertical-align-middle"></button>
@@ -225,8 +236,9 @@
                             <div><label for="project-url" class="add-project-form-label">
                                 <span class="upper-case">url</span> проекта</label>
                             </div>
-                            <div class="form-input-wrapper">
-                                <input id="project-url" class="form-input" placeholder="Добавьте ссылку" type="url"/>
+                            <div class="contact-form-input-wrapper">
+                                <input id="project-url" class="contact-form-input" name="projectUrl" placeholder="Добавьте ссылку" type="url"/>
+                                <div class="error-wrapper"></div>
                             </div>
                         </fieldset>
                         <fieldset class="project-popup-form-fieldset">

@@ -8,6 +8,9 @@
 .hide {
     display: none;
 }
+.relative {
+    position: relative;
+}
 
 .main-container {
     background: inline-image('separated/page-bg-671x669.png');
@@ -259,81 +262,3 @@
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#393939',endColorstr='#393939');
     background: rgba(0, 0, 0, 0.7);
 }
-
-.add-project-popup {
-    width: 362px;
-    height: 482px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -241px 0 0 -181px;
-    background-color:  #eff3f7;
-    box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
-    @include box-sizing(border-box);
-    @include border-radius(4px);
-    overflow: hidden;
-    .add-project-form-label {
-        font-size: 17px;
-        color: #959aa8;
-    }
-
-    .project-popup-content {
-        padding: 7px 21px;
-    }
-
-    .add-project-popup-header {
-        background: #48cbe8;
-        padding: 0 12px;
-    }
-    .add-project-popup-title {
-        height: 44px;
-        font: 25px 'firasans-regular';
-        color: #fff;
-    }
-    .project-popup-close-btn {
-        line-height: 1;
-        display: inline-block;
-        background-image: $ui-sprite;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        @include sprite($ui-sprite, 'add-project-popup-close-btn-25x25', true);
-    }
-    .project-popup-form-fieldset {
-        margin: 0 0 7px 0;
-    }
-    .header-bottom-border {
-        height: 9px;
-        background: #67dffa;
-    }
-    .project-textarea-wrapper {
-        height: 94px;
-        padding: 10px 9px 6px;
-        margin: 0 0 8px 0;
-        @include border-radius(4px);
-    }
-    .project-textarea {
-        @include border-radius(4px);
-    }
-
-    .submit-project {
-        height: 31px;
-        padding: 0 26px;
-        font-size: 19px;
-        background: #48cbe8;
-        color: #fff;
-        @include border-radius(5px);
-        cursor: pointer;
-    }
-
-    .download-img-btn-cell {
-        width: 52px;
-    }
-    .download-img-btn {
-        cursor: pointer;
-        background-image: $ui-sprite;
-        background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'add-project-popup-download-btn-52x39');
-    }
-
-}
-
