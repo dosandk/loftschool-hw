@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="css/ui/ui.min.css"/>
 
     <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
     <!--[if lt IE 9]>
@@ -38,6 +39,14 @@
         </section>
 
         <?php include(TEMPLATES.'footer.php'); ?>
+
+        <?php include(TEMPLATES.'elements/add-project-popup.php'); ?>
     </section>
+
+    <script>
+        $(function() {
+            app.initialize();
+        });
+    </script>
 </body>
 </html>

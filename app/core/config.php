@@ -1,6 +1,6 @@
 <?php
 
-    define('TEMPLATES', $_SERVER['DOCUMENT_ROOT'].'/views/templates/');
+    define('TEMPLATES', $_SERVER['DOCUMENT_ROOT'].'/core/views/templates/');
 
     define("DB_HOST", "localhost");
     define("DB_USER", "root");

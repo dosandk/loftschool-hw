@@ -135,6 +135,9 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.add-project-popup .submit-project.disabled {
+  background: #8C8C8C;
+}
 .add-project-popup .download-img-btn-cell {
   width: 52px;
 }

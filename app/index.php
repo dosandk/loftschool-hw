@@ -5,4 +5,4 @@
 
     $view = empty($_GET['view']) ? 'about-me' : $_GET['view'];
 
-    include($_SERVER['DOCUMENT_ROOT'].'/views/portfolio.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/core/views/portfolio.php');
