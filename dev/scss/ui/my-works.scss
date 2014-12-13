@@ -38,6 +38,11 @@
         height: 125px;
         background: #edf8fc;
         border: 1px dashed #3ca9c0;
+        &:hover {
+            border: 1px dashed #3590a6;
+            background: #a8c5dd;
+            cursor: pointer;
+        }
     }
     .download-project-icon {
         display: inline-block;
@@ -96,13 +101,14 @@
         background: #67dffa;
     }
     .project-textarea-wrapper {
-        height: 94px;
-        padding: 10px 9px 6px;
-        margin: 0 0 8px 0;
-        @include border-radius(4px);
+        position: relative;
     }
     .project-textarea {
         @include border-radius(4px);
+        height: 94px;
+        padding: 10px 9px 6px;
+        margin: 0 0 8px 0;
+        border: 1px solid #48cbe8;
     }
 
     .submit-project {
@@ -122,8 +128,10 @@
         width: 52px;
     }
     .download-img-btn {
+        width: 52px;
         height: 42px;
         cursor: pointer;
+        position: absolute;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
         @include sprite($ui-sprite, 'add-project-popup-download-btn-52x39');
@@ -142,7 +150,8 @@
     @include border-radius(4px);
 }
 
-input.error {
+input.error,
+textarea.error {
     background: #fad2d1;
     border: 1px solid #f97e76;
 }

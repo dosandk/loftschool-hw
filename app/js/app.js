@@ -16,55 +16,16 @@ var app = {
         self.addEventForHideAddProjectPopup();
         self.showAddProjectPopup();
         self.toggleSubmitBtnStatus();
+        self.showImgPath();
+
     },
-    contactFormValidationInit: function () {
-        var self = this;
-
-        $('#add-project-form').validate({
-            rules: {
-                projectName: 'required',
-                projectImg: 'required',
-                projectUrl: {
-                    required: true,
-                    url: true
-                }
-            },
-            messages: {
-                projectName: "введите название",
-                projectImg: "изображение",
-                projectUrl: {
-                    required: "ссылка на проект",
-                    url: "Введите корректную ссылку"
-                }
-            },
-            errorPlacement: function(error,element){
-                error.appendTo(element.next('.error-wrapper'));
-            },
-            submitHandler: function(form) {
-                $.ajax({
-                    url: "core/controllers/add-project.php",
-                    type: 'POST',
-                    data: $(form).serialize()
-                })
-                .done(function(data) {
-                    console.log('done');
-
-                    console.log(data);
-                    self.hideAddProjectPopup();
-
-                }).fail(function(error) {
-                    console.log('fail');
-                    console.log(error);
-
-                }).always(function() {
-                    console.log('always');
-
-                });
-            }
+    showImgPath: function() {
+        $('#project-img').on('change', function() {
+            $('#project-img-txt').val($('#project-img').val());
         });
     },
     toggleSubmitBtnStatus: function () {
-        $('#add-project-form input').on('keyup blur change', function () {
+        $('#add-project-form input, textarea').on('keyup blur change', function () {
             if ($('#add-project-form').valid()) {
                 $('.submit-project').prop('disabled', false).removeClass('disabled');
             } else {
@@ -75,8 +36,8 @@ var app = {
     showAddProjectPopup: function () {
         var self = this;
 
-        $('.download-project-icon').on('click', function () {
-            $('.modal-overlay').removeClass('hide');
+        $('.download-project-btn').on('click', function () {
+            $('.modal-overlay').fadeIn(500);
 
             self.contactFormValidationInit();
         });
@@ -89,7 +50,55 @@ var app = {
         });
     },
     hideAddProjectPopup: function() {
-        $('.modal-overlay').addClass('hide');
+        $('.modal-overlay').fadeOut(500);
         $('#add-project-form')[0].reset();
     }
+};
+
+
+app.contactFormValidationInit = function () {
+    var self = this;
+
+    $('#add-project-form').validate({
+        rules: {
+            projectName: 'required',
+            projectImg: 'required',
+            projectDescription: 'required',
+            projectUrl: {
+                required: true,
+                url: true
+            }
+        },
+        messages: {
+            projectName: "введите название",
+            projectImg: "изображение",
+            projectUrl: {
+                required: "ссылка на проект",
+                url: "Введите корректную ссылку"
+            },
+            projectDescription: "Введите описание проекта"
+        },
+        errorPlacement: function(error, element){
+            error.appendTo(element.next('.error-wrapper'));
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                url: "core/controllers/add-project.php",
+                type: 'POST',
+                data: $(form).serialize()
+            })
+                .done(function(data) {
+                    self.hideAddProjectPopup();
+
+                    var projectTemplate = _.template($('#project-template').html(), {projectUrl: 'posts', projectDescription: 'projectDescription'});
+
+                    $('#download-project-btn').before(projectTemplate(data));
+
+                }).fail(function(error) {
+                    //console.log('fail');
+                }).always(function() {
+                    //console.log('always');
+                });
+        }
+    });
 };

@@ -9,7 +9,7 @@
     </header>
 
     <div class="contact-form-wrapper">
-        <form action="">
+        <form action="javascript:void(0);">
             <section class="contact-form-fields-group">
                 <fieldset class="fieldset">
                     <div class="display-table fixed-table-layout parent-size">

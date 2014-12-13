@@ -2,17 +2,17 @@
     <article class="navigation-wrapper">
         <nav>
             <ul>
-                <li class="navigation-el active">
+                <li class="navigation-el <?php if ($view == 'about-me') { ?> active <?php } ?>">
                     <a class="navigation-link" href="?view=about-me">
                         Обо мне
                     </a>
                 </li>
-                <li class="navigation-el">
+                <li class="navigation-el <?php if ($view == 'my-works') { ?> active <?php } ?>">
                     <a class="navigation-link" href="?view=my-works">
                         Мои работы
                     </a>
                 </li>
-                <li class="navigation-el">
+                <li class="navigation-el <?php if ($view == 'contacts') { ?> active <?php } ?>">
                     <a class="navigation-link" href="?view=contacts">
                         Связаться со мной
                     </a>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="display-table-cell vertical-align-middle">
                         <a class="contact-link" href="mailto:pochta@mail.ru">
-                            pochta@mail.ru
+                            <script type="text/javascript">document.write('pochta@mail.ru')</script>
                         </a>
                     </div>
                 </div>
@@ -45,7 +45,9 @@
                         </a>
                     </div>
                     <div class="display-table-cell vertical-align-middle">
-                        <a class="contact-link" href="tel:+79812342323">+79812342323</a>
+                        <a class="contact-link" href="tel:+79812342323">
+                            <script type="text/javascript">document.write('+79812342323')</script>
+                        </a>
                     </div>
                 </div>
             </li>

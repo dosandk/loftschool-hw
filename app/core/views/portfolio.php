@@ -13,7 +13,8 @@
     <link type="text/css" rel="stylesheet" href="css/ui/ui.min.css"/>
 
     <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/libs/underscore/underscore-min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
     <!--[if lt IE 9]>
