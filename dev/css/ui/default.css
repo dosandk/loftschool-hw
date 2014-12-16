@@ -161,7 +161,7 @@ fieldset {
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -680px 0;
+  background-position: -469px 0;
   height: 57px;
   width: 245px;
 }
@@ -180,28 +180,28 @@ fieldset {
   background-repeat: no-repeat;
 }
 .header-inner-wrapper .vk-icon {
-  background-position: -1195px 0;
+  background-position: -984px 0;
 }
 .header-inner-wrapper .vk-icon:hover, .header-inner-wrapper .vk-icon.vk-icon-47x47-hover {
-  background-position: -1252px 0;
+  background-position: -1041px 0;
 }
 .header-inner-wrapper .tw-icon {
-  background-position: -1025px 0;
+  background-position: -814px 0;
 }
 .header-inner-wrapper .tw-icon:hover, .header-inner-wrapper .tw-icon.tw-icon-47x47-hover {
-  background-position: -1082px 0;
+  background-position: -871px 0;
 }
 .header-inner-wrapper .fb-icon {
-  background-position: -452px 0;
+  background-position: -241px 0;
 }
 .header-inner-wrapper .fb-icon:hover, .header-inner-wrapper .fb-icon.fb-icon-47x47-hover {
-  background-position: -509px 0;
+  background-position: -298px 0;
 }
 .header-inner-wrapper .gh-icon {
-  background-position: -566px 0;
+  background-position: -355px 0;
 }
 .header-inner-wrapper .gh-icon:hover, .header-inner-wrapper .gh-icon.gh-icon-47x47-hover {
-  background-position: -623px 0;
+  background-position: -412px 0;
 }
 .header-inner-wrapper .social-icon-link {
   width: 100%;
@@ -329,17 +329,17 @@ fieldset {
   background-repeat: no-repeat;
 }
 .contacts-wrapper .mail-icon {
-  background-position: -935px 0;
+  background-position: -724px 0;
   height: 16px;
   width: 21px;
 }
 .contacts-wrapper .phone-icon {
-  background-position: -966px 0;
+  background-position: -755px 0;
   height: 21px;
   width: 19px;
 }
 .contacts-wrapper .skype-icon {
-  background-position: -995px 0;
+  background-position: -784px 0;
   height: 20px;
   width: 20px;
 }

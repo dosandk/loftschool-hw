@@ -27,11 +27,17 @@
 }
 
 .avatar-container {
-  display: inline-block;
-  background-image: url('../../img/spritesheets/ui.png');
-  background-position: -190px 0;
+  width: 200px;
   height: 200px;
-  width: 201px;
+  display: inline-block;
+  overflow: hidden;
+  border: 5px solid #2fa5bc;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .main-info-list {
@@ -89,13 +95,29 @@
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -1309px 0;
+  background-position: -1098px 0;
   height: 34px;
   width: 36px;
 }
 .experience-info-list-el .company-name-info-cell {
   padding: 0 0 0 30px;
   color: #4a545d;
+}
+.experience-info-list-el .company-name-info-cell .one-world-link {
+  text-decoration: none;
+  color: #4a545d;
+}
+.experience-info-list-el .company-name-info-cell .one-world-link:visited {
+  color: #4a545d;
+}
+.experience-info-list-el .company-name-info-cell .one-world-link:focus {
+  color: #4a545d;
+}
+.experience-info-list-el .company-name-info-cell .one-world-link:active {
+  color: #4a545d;
+}
+.experience-info-list-el .company-name-info-cell .one-world-link:hover {
+  text-decoration: underline;
 }
 .experience-info-list-el .company-name {
   font-size: 17px;
@@ -125,7 +147,7 @@
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -401px 0;
+  background-position: -190px 0;
   height: 23px;
   width: 41px;
 }

@@ -32,7 +32,7 @@
                     </div>
                     <div class="display-table-cell vertical-align-middle">
                         <a class="contact-link" href="mailto:pochta@mail.ru">
-                            <script type="text/javascript">document.write('pochta@mail.ru')</script>
+                            <script type="text/javascript">document.write('dosandkv@gmail.com')</script>
                         </a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         </a>
                     </div>
                     <div class="display-table-cell vertical-align-middle">
-                        <a class="contact-link" href="skype:dosandk?call">nickname</a>
+                        <a class="contact-link" href="skype:dosandk?call">dosandk</a>
                     </div>
                 </div>
             </li>

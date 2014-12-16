@@ -29,9 +29,13 @@
     text-align: center;
 }
 .avatar-container {
+    width: 200px;
+    height: 200px;
     display: inline-block;
-    background-image: $ui-sprite;
-    @include sprite($ui-sprite, 'default-avatar-icon-201x200', true);
+    overflow: hidden;
+    border: 5px solid #2fa5bc;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
 }
 .main-info-list {
     margin: 0 0 28px 11px;
@@ -86,9 +90,18 @@
         background-repeat: no-repeat;
         @include sprite($ui-sprite, 'work-icon-36x34', true);
     }
+
     .company-name-info-cell {
         padding: 0 0 0 30px;
         color: #4a545d;
+        .one-world-link {
+            text-decoration: none;
+            @include link-colors(#4a545d, false, #4a545d, #4a545d, #4a545d);
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
     }
     .company-name {
         font-size: 17px;
