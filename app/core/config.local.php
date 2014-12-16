@@ -1,11 +1,11 @@
 <?php
 
-    define('DIR', '/');
+    define('DIR', 'loftschool/app/');
     define('DOCROOT', $_SERVER['DOCUMENT_ROOT']);
-    define('TEMPLATES', $_SERVER['DOCUMENT_ROOT'].'/core/views/templates/');
+    define('TEMPLATES', DOCROOT.DIR.'/core/views/templates/');
 
     define("DB_HOST", "localhost");
     define("DB_USER", "root");
-    define("DB_PSWD", "Luh5u63hmb");
+    define("DB_PSWD", "");
     define("DB_NAME", "loftschool");
 
