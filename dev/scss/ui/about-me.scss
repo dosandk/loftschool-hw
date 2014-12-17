@@ -141,7 +141,7 @@
         @include sprite($ui-sprite, 'courses-icon-41x32', true);
     }
     .education-palace-cell {
-        padding: 0 0 0 30px;
+        padding: 0 30px 0;
     }
     .education-palace {
         font-size: 17px;
@@ -151,4 +151,5 @@
         font: 15px 'firasans-light';
     }
 }
+
 // education end

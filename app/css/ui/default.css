@@ -159,7 +159,7 @@ fieldset {
 }
 .header-inner-wrapper .loftschool-logo-container {
   display: inline-block;
-  background-image: url('../../img/spritesheets/ui.png');
+  background-image: url('../../../dev/img/spritesheets/ui.png');
   background-repeat: no-repeat;
   background-position: -529px 0;
   height: 61px;
@@ -176,7 +176,7 @@ fieldset {
   height: 47px;
   display: inline-block;
   cursor: pointer;
-  background-image: url('../../img/spritesheets/ui.png');
+  background-image: url('../../../dev/img/spritesheets/ui.png');
   background-repeat: no-repeat;
 }
 .header-inner-wrapper .vk-icon {
@@ -325,7 +325,7 @@ fieldset {
 .contacts-wrapper .contact-icon {
   display: inline-block;
   line-height: 16px;
-  background-image: url('../../img/spritesheets/ui.png');
+  background-image: url('../../../dev/img/spritesheets/ui.png');
   background-repeat: no-repeat;
 }
 .contacts-wrapper .mail-icon {

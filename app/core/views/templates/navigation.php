@@ -21,8 +21,8 @@
         </nav>
     </article>
     <article class="contacts-wrapper">
+        <div class="contacts-title">Контакты</div>
         <ul>
-            <li class="contacts-el contacts-title">Контакты</li>
             <li class="contacts-el mail-el">
                 <div class="display-table parent-size">
                     <div class="display-table-cell vertical-align-middle contact-icon-cell">

@@ -4,7 +4,7 @@ require 'susy'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "dev/css"
+css_dir = "app/css"
 sass_dir = "dev/scss"
 images_dir = "dev/img"
 javascripts_dir = "dev/js"

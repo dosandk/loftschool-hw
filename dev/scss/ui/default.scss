@@ -1,5 +1,6 @@
 @import "base";
 @import "reset";
+//@import "normalize";
 @import "table-scaffolding";
 
 .upper-case {
@@ -39,7 +40,7 @@
         display: inline-block;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'loftschool-log-245x57', true);
+        @include sprite($ui-sprite, 'profile-logo-333x61', true);
     }
     .social-links {
         display: inline-block;
@@ -175,6 +176,7 @@
         font-size: 21px;
         padding: 0 20px;
         line-height: 52px;
+        color: #fff;
     }
     .contact-link {
         text-decoration: none;
@@ -249,6 +251,7 @@
 .form-taxtarea {
     @include box-sizing(border-box);
 }
+
 
 // popup
 .modal-overlay {

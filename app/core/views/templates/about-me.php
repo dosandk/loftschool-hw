@@ -1,9 +1,7 @@
 <article class="about">
-    <header>
-        <h1 class="main-info-title">
-            <span class="h1-txt">Основная информация</span>
-        </h1>
-    </header>
+    <h1 class="main-info-title">
+        <span class="h1-txt">Основная информация</span>
+    </h1>
     <div class="display-table">
         <div class="display-table-cell vertical-align-top avatar-container-cell">
             <div class="avatar-container">
@@ -50,11 +48,9 @@
     </div>
 </article>
 <article class="experience">
-    <header>
-        <h1 class="experience-title">
-            <span class="h1-txt">Опыт работы</span>
-        </h1>
-    </header>
+    <h1 class="experience-title">
+        <span class="h1-txt">Опыт работы</span>
+    </h1>
     <ul>
         <li class="experience-info-list-el">
             <div class="display-table">
@@ -89,11 +85,9 @@
     </ul>
 </article>
 <article class="education">
-    <header>
-        <h1 class="education-title">
-            <span class="h1-txt">Образование</span>
-        </h1>
-    </header>
+    <h1 class="education-title">
+        <span class="h1-txt">Образование</span>
+    </h1>
     <ul class="education-info-list">
         <li class="education-info-list-el">
             <div class="display-table parent-width">
