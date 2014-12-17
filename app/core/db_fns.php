@@ -34,5 +34,5 @@
                     '$project_url',
                     '$project_description')";
 
-        mysql_query($query);
+        return mysql_query($query);
     };

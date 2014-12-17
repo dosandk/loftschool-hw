@@ -11,6 +11,12 @@
         <div class="header-bottom-border">&nbsp;</div>
 
         <div class="project-popup-content">
+            <div class="project-downloading-error relative hide">
+                <div class="error-title">Ошибка!</div>
+                <div class="error-description">Невозможно добавить проект.</div>
+                <div class="error-block-close-btn">&nbsp;</div>
+            </div>
+
             <form id="add-project-form" method="post" enctype="multipart/form-data">
                 <fieldset class="project-popup-form-fieldset">
                     <div>
@@ -62,6 +68,13 @@
                 </footer>
             </form>
         </div>
+    </div>
 
+    <div class="success-notification-popup hide">
+        <div class="project-downloading-success relative">
+            <div class="success-title">Ура!</div>
+            <div class="success-description">Проект успешно добавлен.</div>
+            <div class="success-block-close-btn">&nbsp;</div>
+        </div>
     </div>
 </div>

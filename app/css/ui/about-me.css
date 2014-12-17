@@ -95,7 +95,7 @@
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -1186px 0;
+  background-position: -1228px 0;
   height: 34px;
   width: 36px;
 }
@@ -147,7 +147,7 @@
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -190px 0;
+  background-position: -232px 0;
   height: 23px;
   width: 41px;
 }
@@ -155,7 +155,7 @@
   display: inline-block;
   background-image: url('../../img/spritesheets/ui.png');
   background-repeat: no-repeat;
-  background-position: -139px 0;
+  background-position: -181px 0;
   height: 32px;
   width: 41px;
 }

@@ -6,10 +6,10 @@ require 'susy'
 http_path = "/"
 css_dir = "app/css"
 sass_dir = "dev/scss"
-images_dir = "dev/img"
+images_dir = "app/img"
 javascripts_dir = "dev/js"
 fonts_dir = "dev/fonts"
-generated_images_dir = "dev/img/spritesheets"
+generated_images_dir = "app/img/spritesheets"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

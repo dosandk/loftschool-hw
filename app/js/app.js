@@ -18,6 +18,28 @@ var app = {
         self.toggleSubmitBtnStatus();
         self.showImgPath();
 
+        self.closeSuccessNotification();
+        self.closeErrorNotification();
+
+    },
+    showSuccessNotification: function () {
+        $('.success-notification-popup').fadeIn('slow');
+    },
+    showErrorNotification: function () {
+        $('.project-downloading-error').fadeIn('slow');
+    },
+    closeSuccessNotification: function() {
+        var self = this;
+
+        $('.success-block-close-btn').on('click', function() {
+            $(this).parents('.success-notification-popup').fadeOut('slow');
+            self.hidePopupOverlay();
+        });
+    },
+    closeErrorNotification: function () {
+        $('.error-block-close-btn').on('click', function() {
+            $(this).parents('.project-downloading-error').fadeOut('slow');
+        });
     },
     showImgPath: function() {
         $('#project-img').on('change', function() {
@@ -38,8 +60,8 @@ var app = {
 
         $('.download-project-btn').on('click', function () {
             $('.modal-overlay').fadeIn(500);
-
-            self.contactFormValidationInit();
+            $('.add-project-popup').fadeIn(500);
+            self.addProjectFormValidationInit();
         });
     },
     addEventForHideAddProjectPopup: function() {
@@ -47,16 +69,20 @@ var app = {
 
         $('.project-popup-close-btn').on('click', function () {
             self.hideAddProjectPopup();
+            self.hidePopupOverlay();
         });
     },
-    hideAddProjectPopup: function() {
+    hidePopupOverlay: function() {
         $('.modal-overlay').fadeOut(500);
+    },
+    hideAddProjectPopup: function() {
+        $('.add-project-popup').fadeOut(500);
         $('#add-project-form')[0].reset();
     }
 };
 
 
-app.contactFormValidationInit = function () {
+app.addProjectFormValidationInit = function () {
     var self = this;
 
     $('#add-project-form').validate({
@@ -89,6 +115,7 @@ app.contactFormValidationInit = function () {
             })
                 .done(function(data) {
                     self.hideAddProjectPopup();
+                    self.showSuccessNotification();
 
                     var projectTemplate = _.template($('#project-template').html(), {projectUrl: 'posts', projectDescription: 'projectDescription'});
 

@@ -128,13 +128,11 @@
         width: 52px;
     }
     .download-img-btn {
-        width: 52px;
-        height: 42px;
         cursor: pointer;
         position: absolute;
         background-image: $ui-sprite;
         background-repeat: no-repeat;
-        @include sprite($ui-sprite, 'add-project-popup-download-btn-52x39');
+        @include sprite($ui-sprite, 'add-project-popup-download-btn-52x39', true);
     }
 }
 
@@ -172,8 +170,83 @@ label.error {
     color: #fff;
     font-size: 13px;
     padding: 0 15px;
+    position: relative;
     @include border-radius(2px);
-    /*&:after {
+    @include box-shadow(0 3px 3px 0 rgba(0,0,0,0.2));
+    &:after {
+        display: block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #f97e76;
+        position: absolute;
+        margin-top: -4px;
+        top: 50%;
+        left: 100%;
+        margin-left: -4px;
+        @include transform(rotate(135deg));
+    }
+}
 
-    }*/
+.project-downloading-error {
+    @include border-radius(2px);
+    border: 1px solid #f97e76;
+    background: #f2cccd;
+    color: #f97e76;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    .error-title {
+        font-size: 25px;
+    }
+    .error-description {
+        font-size: 15px;
+    }
+    .error-block-close-btn {
+        top: 4px;
+        right: 4px;
+        position: absolute;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-image: $ui-sprite;
+        @include sprite($ui-sprite, 'add-project-error-11x11', true);
+
+    }
+}
+
+.success-notification-popup {
+    position: absolute;
+    width: 350px;
+    height: 92px;
+    top: 50%;
+    margin-top: -46px;
+    left: 50%;
+    margin-left: -175px;
+    background:  #eff3f7;
+    padding: 15px;
+    @include box-sizing(border-box);
+    @include border-radius(4px);
+    @include box-shadow(0 6px 13px 1px rgba(13,16,7,0.35));
+}
+
+.project-downloading-success {
+    @include border-radius(2px);
+    border: 1px solid #49bb7b;
+    background: #b8e1ce;
+    color: #49bb7b;
+    padding: 0 10px;
+    .success-title {
+        font-size: 25px;
+    }
+    .success-description {
+        font-size: 15px;
+    }
+    .success-block-close-btn {
+        top: 4px;
+        right: 4px;
+        position: absolute;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-image: $ui-sprite;
+        @include sprite($ui-sprite, 'add-project-success-11x11', true);
+    }
 }
