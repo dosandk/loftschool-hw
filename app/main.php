@@ -2,25 +2,30 @@
 
     if (strpos($_SERVER['HTTP_HOST'], 'vl-shevchuk.ru') !== false) {
         require_once($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
-        echo 1;
     } else {
         require_once($_SERVER['DOCUMENT_ROOT'].'loftschool/app/core/config.local.php');
     }
 
     require_once(DOCROOT.DIR.'core/db_fns.php');
     db_connect();
+    session_start();
+
+    $data = array();
 
     $view = empty($_GET['view']) ? 'about-me' : $_GET['view'];
 
     switch ($view) {
-        case 'foo':
-            echo 1;
+        case 'about-me':
+//            echo 1;
+            $data['title'] = 'Vladimir Shevchuk | About Me Homework 1 (loftschool december 2014)';
             break;
-        case 'bar':
-            echo 2;
+        case 'my-works':
+//            echo 2;
+            $data['title'] = 'Vladimir Shevchuk | My works Homework 1 (loftschool december 2014)';
             break;
-        case 'cake':
-            echo 3;
+        case 'contacts':
+//            echo 3;
+            $data['title'] = 'Vladimir Shevchuk | Contacts Homework 1 (loftschool december 2014)';
             break;
     }
 

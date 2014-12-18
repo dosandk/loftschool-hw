@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Vladimir Shevchuk | Homework 1 (loftschool december 2014) </title>
+    <title><?= $data['title'] ?></title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

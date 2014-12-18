@@ -12,13 +12,13 @@
         <?php foreach($projects as $project): ?>
             <div class="gallery-item">
                 <figure>
-                    <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="<?php echo $project['description'] ?>"/>
+                    <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="<?= $project['description'] ?>"/>
                     <figcaption class="project-info">
                         <div class="project-source">
-                            <a target="_blank" href="<?php echo $project['url'] ?>"><?php echo $project['url'] ?></a>
+                            <a target="_blank" href="<?= $project['url'] ?>"><?= $project['url'] ?></a>
                         </div>
                         <div class="project-description">
-                            <?php echo $project['name'] ?> <?php echo $project['description'] ?>
+                            <?= $project['name'] ?> <?= $project['description'] ?>
                         </div>
                     </figcaption>
                 </figure>

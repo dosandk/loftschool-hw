@@ -3,17 +3,17 @@
         <nav>
             <ul>
                 <li class="navigation-el <?php if ($view == 'about-me') { ?> active <?php } ?>">
-                    <a class="navigation-link" href="?view=about-me">
+                    <a class="navigation-link" href="<?= DOMAIN_URL ?>about-me">
                         Обо мне
                     </a>
                 </li>
                 <li class="navigation-el <?php if ($view == 'my-works') { ?> active <?php } ?>">
-                    <a class="navigation-link" href="?view=my-works">
+                    <a class="navigation-link" href="<?= DOMAIN_URL ?>my-works">
                         Мои работы
                     </a>
                 </li>
                 <li class="navigation-el <?php if ($view == 'contacts') { ?> active <?php } ?>">
-                    <a class="navigation-link" href="?view=contacts">
+                    <a class="navigation-link" href="<?= DOMAIN_URL ?>contacts">
                         Связаться со мной
                     </a>
                 </li>
