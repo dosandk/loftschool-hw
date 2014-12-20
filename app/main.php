@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     if (strpos($_SERVER['HTTP_HOST'], 'vl-shevchuk.ru') !== false) {
         require_once($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
     } else {
@@ -7,8 +9,8 @@
     }
 
     require_once(DOCROOT.DIR.'core/db_fns.php');
-    db_connect();
-    session_start();
+
+    $db = db_connect();
 
     $data = array();
 
@@ -16,17 +18,21 @@
 
     switch ($view) {
         case 'about-me':
-//            echo 1;
             $data['title'] = 'Vladimir Shevchuk | About Me Homework 1 (loftschool december 2014)';
+            include(DOCROOT.DIR.'/core/views/portfolio.php');
             break;
         case 'my-works':
-//            echo 2;
             $data['title'] = 'Vladimir Shevchuk | My works Homework 1 (loftschool december 2014)';
+            $data['projects'] = get_projects();
+            include(DOCROOT.DIR.'/core/views/portfolio.php');
             break;
         case 'contacts':
-//            echo 3;
             $data['title'] = 'Vladimir Shevchuk | Contacts Homework 1 (loftschool december 2014)';
+            include(DOCROOT.DIR.'/core/views/portfolio.php');
+            break;
+        case 'admin':
+            $data['title'] = 'Vladimir Shevchuk | Admin Homework 1 (loftschool december 2014)';
+            include(DOCROOT.DIR.'/core/views/login-popup.php');
             break;
     }
 
-    include(DOCROOT.DIR.'/core/views/portfolio.php');

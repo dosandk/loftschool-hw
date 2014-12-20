@@ -41,10 +41,10 @@
 
         </section>
 
-        <?php include(TEMPLATES.'footer.php'); ?>
-
         <?php include(TEMPLATES.'elements/add-project-popup.php'); ?>
     </section>
+
+    <?php include(TEMPLATES.'footer.php'); ?>
 
     <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.min.js"></script>

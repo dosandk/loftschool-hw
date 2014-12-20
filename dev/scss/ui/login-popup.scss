@@ -1,0 +1,57 @@
+@import "base";
+
+.login-popup-modal-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 80px;
+    left: 0;
+}
+.login-popup {
+    width: 590px;
+    display: inline-block;
+    background:  #eff3f7;
+    @include box-sizing(border-box);
+    @include border-radius(4px);
+    @include box-shadow(0 6px 13px 1px rgba(13,16,7,0.35));
+    .login-popup-header {
+        background: #48cae7;
+        color: #fff;
+        text-align: center;
+        font-size: 40px;
+        border-bottom: 15px solid #67def9;
+    }
+    .login-content {
+        padding: 20px;
+        text-align: center;
+    }
+    .login-form-inputs-wrap {
+        margin-bottom: 25px;
+    }
+    .login-input-title {
+        text-align: center;
+        font: 36px 'firasans-light';
+        color: #959aa8;
+        display: block;
+    }
+    .login-form-input-wrap {
+        width: 425px;
+        display: inline-block;
+        position: relative;
+    }
+    .login-popup-submit-btn {
+        min-width: 224px;
+        height: 49px;
+        font-size: 36px;
+        background: #48cae7;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 25px;
+        cursor: pointer;
+        @include border-radius(4px);
+        @include box-shadow(0 4px 0 0 rgba(59, 167, 191, 1));
+        &:active {
+            @include box-shadow(0 -4px 0 0 rgba(59, 167, 191, 1));
+        }
+    }
+}

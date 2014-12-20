@@ -129,3 +129,35 @@ app.addProjectFormValidationInit = function () {
         }
     });
 };
+
+app.loginFormValidationInit = function () {
+    var self = this;
+
+    $('#login-form').validate({
+        rules: {
+            userLogin: 'required',
+            userPassword: 'required'
+        },
+        messages: {
+            userLogin: "введите логин",
+            userPassword: "введите пароль"
+        },
+        errorPlacement: function(error, element){
+            error.appendTo(element.next('.error-wrapper'));
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                url: "core/controllers/login.php",
+                type: 'POST',
+                data: $(form).serialize()
+            })
+                .done(function(data) {
+                    window.location.href = data.redirectUrl;
+                }).fail(function(error) {
+                    //console.log('fail');
+                }).always(function() {
+                    //console.log('always');
+                });
+        }
+    });
+};

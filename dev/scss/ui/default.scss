@@ -3,6 +3,10 @@
 //@import "normalize";
 @import "table-scaffolding";
 
+html, body {
+    height: 100%;
+}
+
 .upper-case {
     text-transform: uppercase;
 }
@@ -16,6 +20,15 @@
 .main-container {
     background: inline-image('separated/page-bg-671x669.png');
     font-family: 'firasans-book', sans-serif;
+    min-height: 100%;
+    margin: 0 auto -80px;
+}
+.main-container:after {
+    content: " ";
+    display: block;
+}
+.main-container:after {
+    height: 80px;
 }
 
 // header start
@@ -215,6 +228,29 @@
     .copyright {
         font: 13px 'firasans-light';
     }
+    .footer-inner-wrapper {
+        height: 100%;
+        padding: 0 20px;
+    }
+    .footer-table {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .login-btn {
+        background-image: $ui-sprite;
+        background-repeat: no-repeat;
+        display: inline-block;
+        cursor: pointer;
+        float: left;
+        @include sprite($ui-sprite, 'login-btn-20x32', true);
+        &.opened {
+
+        }
+        &.closed {
+
+        }
+    }
+
 }
 // footer end
 

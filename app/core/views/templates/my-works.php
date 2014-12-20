@@ -7,9 +7,7 @@
 
     <div class="gallery">
 
-        <?php $projects = get_projects() ?>
-
-        <?php foreach($projects as $project): ?>
+        <?php foreach($data['projects'] as $project): ?>
             <div class="gallery-item">
                 <figure>
                     <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="<?= $project['description'] ?>"/>
@@ -25,14 +23,16 @@
             </div>
         <?php endforeach ?>
 
-        <div id="download-project-btn" class="gallery-item">
-            <div class="display-inline-table download-project-btn">
-                <div class="display-table-cell vertical-align-middle to-center-inline">
-                    <div class="download-project-icon"></div>
-                    <div class="add-project-btn-txt">Добавить проект</div>
+        <?php if (@$_SESSION['auth']) { ?>
+            <div id="download-project-btn" class="gallery-item">
+                <div class="display-inline-table download-project-btn">
+                    <div class="display-table-cell vertical-align-middle to-center-inline">
+                        <div class="download-project-icon"></div>
+                        <div class="add-project-btn-txt">Добавить проект</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
 </article>
 
