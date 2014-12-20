@@ -69,7 +69,6 @@
 
 <?php include(TEMPLATES.'footer.php'); ?>
 
-
 <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/libs/underscore/underscore-min.js"></script>

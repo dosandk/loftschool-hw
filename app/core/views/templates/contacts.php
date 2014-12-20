@@ -9,7 +9,7 @@
     </header>
 
     <div class="contact-form-wrapper">
-        <form action="javascript:void(0);">
+        <form id="contact-form">
             <section class="contact-form-fields-group">
                 <fieldset class="fieldset">
                     <div class="display-table fixed-table-layout parent-size">
@@ -17,8 +17,9 @@
                             <div>
                                 <label class="form-label" for="user-name">Имя</label>
                             </div>
-                            <div class="form-input-wrapper">
-                                <input id="user-name" class="form-input" placeholder="Как к Вам обращаться" type="text"/>
+                            <div class="relative">
+                                <input id="user-name" class="form-input" name="userName" placeholder="Как к Вам обращаться" type="text"/>
+                                <div class="error-wrapper"></div>
                             </div>
                         </div>
                         <div class="display-table-cell two-col-gag">&nbsp;</div>
@@ -26,8 +27,9 @@
                             <div>
                                 <label class="form-label" for="user-email">Email</label>
                             </div>
-                            <div class="form-input-wrapper">
-                                <input id="user-email" class="form-input" placeholder="Куда мне писать" type="text"/>
+                            <div class="relative">
+                                <input id="user-email" class="form-input" name="userEmail" placeholder="Куда мне писать" type="email"/>
+                                <div class="error-wrapper right"></div>
                             </div>
                         </div>
                     </div>
@@ -36,8 +38,9 @@
                     <div>
                         <label class="form-label" for="user-message">Сообщение</label>
                     </div>
-                    <div class="form-taxtarea-wrapper contacts-textarea-form-wrapper">
-                        <textarea id="user-message" class="form-taxtarea contacts-textarea" placeholder="Кратко в чем суть" name=""></textarea>
+                    <div class="relative">
+                        <textarea id="user-message" class="form-taxtarea contacts-textarea" name="userMessage" placeholder="Кратко в чем суть"></textarea>
+                        <div class="error-wrapper"></div>
                     </div>
                 </fieldset>
                 <fieldset class="fieldset">
@@ -52,8 +55,9 @@
                         </div>
                         <div class="display-table-cell two-col-gag">&nbsp;</div>
                         <div class="display-table-cell vertical-align-middle parent-half-width">
-                            <div class="form-input-code-wrapper">
-                                <input id="capture-code" class="form-input" placeholder="Введите код" type="text"/>
+                            <div class="relative">
+                                <input id="capture-code" class="form-input" name="captureCode" placeholder="Введите код" type="text"/>
+                                <div class="error-wrapper right"></div>
                             </div>
                         </div>
                     </div>

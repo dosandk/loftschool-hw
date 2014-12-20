@@ -21,6 +21,7 @@ var app = {
         self.closeSuccessNotification();
         self.closeErrorNotification();
 
+        self.contactFormValidationInit();
     },
     showSuccessNotification: function () {
         $('.success-notification-popup').fadeIn('slow');
@@ -152,7 +153,54 @@ app.loginFormValidationInit = function () {
                 data: $(form).serialize()
             })
                 .done(function(data) {
-                    window.location.href = data.redirectUrl;
+                    if (data.message === 'ok' && data.redirectUrl) {
+                        window.location.href = data.redirectUrl;
+                    }
+                }).fail(function(error) {
+                    //console.log('fail');
+                }).always(function() {
+                    //console.log('always');
+                });
+        }
+    });
+};
+
+app.contactFormValidationInit = function () {
+    var self = this;
+
+    $('#contact-form').validate({
+        rules: {
+            userName: 'required',
+            userEmail: {
+                required: true,
+                email: true
+            },
+            userMessage: 'required',
+            captureCode: 'required'
+        },
+        messages: {
+            userName: 'Введите Ваше имя',
+            userEmail: {
+                required: 'Введите Ваш email',
+                email: 'Введите корректный email'
+            },
+            userMessage: 'Введите краткое описание',
+            captureCode: 'Введите код с картинки'
+        },
+        errorPlacement: function(error, element){
+            error.appendTo(element.next('.error-wrapper'));
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                url: "core/controllers/contact.php",
+                type: 'POST',
+                data: $(form).serialize()
+            })
+                .done(function(data) {
+                    console.log(data);
+                    $(form)[0].reset();
+                    self.showSuccessNotification();
+
                 }).fail(function(error) {
                     //console.log('fail');
                 }).always(function() {

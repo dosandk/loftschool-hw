@@ -2,7 +2,7 @@
 
 .contacts {
     margin: 0 0 39px 0;
-    overflow: hidden;
+    display: table;
     background: $content-bg;
     @include border-radius(4px);
     .contacts-header {
@@ -38,15 +38,9 @@
             color: #959aa8;
             font: 19px 'firasans-light';
         }
-        .form-input-code-wrapper {
-            height: 30px;
-            border: 1px solid #48cbe8;
-        }
-        .contacts-textarea-form-wrapper {
-            height: 181px;
-        }
         .contacts-textarea {
             padding: 13px 9px 10px;
+            height: 181px;
         }
         .capture-container {
             width: 189px;
@@ -64,14 +58,24 @@
         .contact-form-submit,
         .contact-form-reset {
             display: inline-block;
+            cursor: pointer;
+            &:hover {
+                @include box-shadow(0 0 0 0 rgba(0,0,0,0.2));
+            }
         }
         .contact-form-submit {
             background:  #48cbe8;
-            box-shadow: 0px 2px 0 0px rgba(59,168,192, 1);
+            @include box-shadow(0 2px 0 0 rgba(59,168,192, 1));
+            &:active {
+                @include box-shadow(0 -2px 0 0 rgba(59,168,192, 1));
+            }
         }
         .contact-form-reset {
             background:  #849db5;
             box-shadow: 0px 2px 0 0px rgba(104,123,143, 1);
+            &:active {
+                @include box-shadow(0 -2px 0 0 rgba(104,123,143, 1));
+            }
         }
     }
 

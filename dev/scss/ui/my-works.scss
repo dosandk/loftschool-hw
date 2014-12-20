@@ -100,15 +100,11 @@
         height: 9px;
         background: #67dffa;
     }
-    .project-textarea-wrapper {
-        position: relative;
-    }
     .project-textarea {
         @include border-radius(4px);
         height: 94px;
         padding: 10px 9px 6px;
         margin: 0 0 8px 0;
-        border: 1px solid #48cbe8;
     }
 
     .submit-project {
@@ -117,10 +113,19 @@
         font-size: 19px;
         background: #48cbe8;
         color: #fff;
-        @include border-radius(5px);
         cursor: pointer;
+        @include border-radius(5px);
+        @include box-shadow(0 2px 0 0 rgba(59,168,192, 1));
         &.disabled {
             background: #8C8C8C;
+            cursor: default;
+            @include box-shadow(0 0 0 0 rgba(104,123,143, 1));
+        }
+        &:hover {
+            @include box-shadow(0 0 0 0 rgba(59,168,192, 1));
+        }
+        &:active {
+            @include box-shadow(0 -2px 0 0 rgba(59,168,192, 1));
         }
     }
 
@@ -133,58 +138,6 @@
         background-image: $ui-sprite;
         background-repeat: no-repeat;
         @include sprite($ui-sprite, 'add-project-popup-download-btn-52x39', true);
-    }
-}
-
-.contact-form-input-wrapper {
-    position: relative;
-}
-.contact-form-input {
-    width: 100%;
-    min-height: 39px;
-    border: 1px solid #48cbe8;
-    text-indent: 8px;
-    color: #48cbe8;
-    @include border-radius(4px);
-}
-
-input.error,
-textarea.error {
-    background: #fad2d1;
-    border: 1px solid #f97e76;
-}
-
-.error-wrapper {
-    width: 250px;
-    height: 26px;
-    position: absolute;
-    right: 100%;
-    top: 50%;
-    margin-top: -13px;
-    margin-right: 28px;
-    text-align: right;
-}
-
-label.error {
-    background: #f97e76;
-    color: #fff;
-    font-size: 13px;
-    padding: 0 15px;
-    position: relative;
-    @include border-radius(2px);
-    @include box-shadow(0 3px 3px 0 rgba(0,0,0,0.2));
-    &:after {
-        display: block;
-        content: '';
-        width: 8px;
-        height: 8px;
-        background: #f97e76;
-        position: absolute;
-        margin-top: -4px;
-        top: 50%;
-        left: 100%;
-        margin-left: -4px;
-        @include transform(rotate(135deg));
     }
 }
 
