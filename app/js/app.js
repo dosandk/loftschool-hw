@@ -63,6 +63,16 @@ var app = {
             $('.modal-overlay').fadeIn(500);
             $('.add-project-popup').fadeIn(500);
             self.addProjectFormValidationInit();
+            self.initFileUploader();
+        });
+    },
+    initFileUploader: function() {
+        var self = this;
+
+        $('.fileUpload').liteUploader({
+            script: 'core/libs/file-uploader/file-uploader.php'
+        }).on('lu:success', function (e, response) {
+            $('#project-img-txt').trigger('keyup');
         });
     },
     addEventForHideAddProjectPopup: function() {
@@ -90,6 +100,7 @@ app.addProjectFormValidationInit = function () {
         rules: {
             projectName: 'required',
             projectImg: 'required',
+            projectImgTxt: 'required',
             projectDescription: 'required',
             projectUrl: {
                 required: true,
@@ -99,6 +110,7 @@ app.addProjectFormValidationInit = function () {
         messages: {
             projectName: "введите название",
             projectImg: "изображение",
+            projectImgTxt: "изображение",
             projectUrl: {
                 required: "ссылка на проект",
                 url: "Введите корректную ссылку"
@@ -112,7 +124,12 @@ app.addProjectFormValidationInit = function () {
             $.ajax({
                 url: "core/controllers/add-project.php",
                 type: 'POST',
-                data: $(form).serialize()
+                data: {
+                    projectName: $('#project-name').val(),
+                    projectImgTxt: $('#project-img-txt').val().split('\\').pop(),
+                    projectUrl: $('#project-url').val(),
+                    projectDescription: $('#project-description').val()
+                }
             })
                 .done(function(data) {
                     self.hideAddProjectPopup();

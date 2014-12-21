@@ -28,16 +28,16 @@
                     </div>
                 </fieldset>
                 <fieldset class="project-popup-form-fieldset">
-                    <div><label for="project-img" class="add-project-form-label">Картинка проекта</label></div>
+                    <div><label class="add-project-form-label">Картинка проекта</label></div>
                     <div class="relative">
                         <div class="display-table parent-size">
                             <div class="display-table-cell">
-                                <input id="project-img-txt" class="form-input" placeholder="Загрузите изображение" readonly type="text"/>
+                                <input id="project-img-txt" class="form-input" name="projectImgTxt" placeholder="Загрузите изображение" type="text"/>
+                                <input id="project-img" class="fileUpload hide" name="fileUpload" type="file"/>
                                 <div class="error-wrapper"></div>
                             </div>
                             <div class="display-table-cell download-img-btn-cell">
                                 <label for="project-img" class="download-img-btn parent-size vertical-align-middle"></label>
-                                <input id="project-img" name="projectImg" class="hide" type="file"/>
                             </div>
                         </div>
                     </div>

@@ -5,12 +5,11 @@ $experimental-support-for-microsoft: true;
 $experimental-support-for-pie: false;
 $experimental-support-for-svg: true;
 
-$screen-xs-min: 320;
-$screen-sm-min: 768;
+$screen-mob-min: 320px;
+$screen-pl-min: 768px;
 
 // colors-settings
 $content-bg: #eff3f7;
-
 
 // fonts-settings
 $fira-fonts-names: 'firasans-book', 'firasans-medium', 'firasans-light', 'firasans-lightitalic', 'firasans-regular';
@@ -20,3 +19,4 @@ $proxima-nova-font-path: 'proxima-nova';
 
 // sprites-settings
 $ui-sprite: sprite-map('ui/*.png', $layout: 'horizontal', $spacing: 10px);
+

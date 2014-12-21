@@ -40,7 +40,7 @@
                                 <label for="user-login" class="login-input-title">Логин</label>
                                 <div class="login-form-input-wrap">
                                     <input id="user-login"
-                                           class="contact-form-input"
+                                           class="form-input"
                                            name="userLogin"
                                            placeholder="Введите логин"
                                            type="text"/>
@@ -50,7 +50,7 @@
                                 <label for="user-password" class="login-input-title">Пароль</label>
                                 <div class="login-form-input-wrap">
                                     <input id="user-password"
-                                           class="contact-form-input"
+                                           class="form-input"
                                            name="userPassword"
                                            placeholder="Введите пароль"
                                            type="password"/>

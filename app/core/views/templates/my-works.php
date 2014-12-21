@@ -10,13 +10,14 @@
         <?php foreach($data['projects'] as $project): ?>
             <div class="gallery-item">
                 <figure>
-                    <img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="<?= $project['description'] ?>"/>
+                    <img class="project-preview" src="<?=DOMAIN_URL ?>core/uploads/<?= $project['image'] ?>" alt="<?= $project['description'] ?>"/>
                     <figcaption class="project-info">
                         <div class="project-source">
                             <a target="_blank" href="<?= $project['url'] ?>"><?= $project['url'] ?></a>
                         </div>
                         <div class="project-description">
-                            <?= $project['name'] ?> <?= $project['description'] ?>
+                            <div><?= $project['name'] ?></div>
+                            <div><?= $project['description'] ?></div>
                         </div>
                     </figcaption>
                 </figure>
@@ -38,12 +39,16 @@
 
 <script id="project-template" type="text/template">
     <div class="gallery-item">
-        <figure><img class="project-preview" src="./img/separated/default-project-img-179x125.jpg" alt="<%= projectDescription %>"/>
+        <figure>
+            <img class="project-preview" src="<?= DOMAIN_URL ?>core/uploads/<%= projectImg %>" alt="<%= projectDescription %>"/>
             <figcaption class="project-info">
                 <div class="project-source">
                     <a target="_blank" href="<%= projectUrl %>"><%= projectUrl %></a>
                 </div>
-                <div class="project-description"><%= projectName %> <%= projectDescription %>></div>
+                <div class="project-description">
+                    <div><%= projectName %></div>
+                    <div><%= projectDescription %></div>
+                </div>
             </figcaption>
         </figure>
     </div>

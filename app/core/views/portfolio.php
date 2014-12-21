@@ -48,6 +48,7 @@
 
     <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/libs/jquery-plugins/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-plugins/jquery.liteuploader.min.js"></script>
     <script type="text/javascript" src="js/libs/underscore/underscore-min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 

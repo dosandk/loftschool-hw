@@ -1,19 +1,19 @@
-<aside class="left-sidebar">
+<aside class="left-sidebar screen-mob-min-hide">
     <article class="navigation-wrapper">
         <nav>
             <ul>
-                <li class="navigation-el <?php if ($view == 'about-me') { ?> active <?php } ?>">
-                    <a class="navigation-link" href="<?= DOMAIN_URL ?>about-me">
+                <li class="display-table parent-size navigation-el <?php if ($view == 'about-me') { ?> active <?php } ?>">
+                    <a class="display-table-cell vertical-align-middle navigation-link" href="<?= DOMAIN_URL ?>about-me">
                         Обо мне
                     </a>
                 </li>
-                <li class="navigation-el <?php if ($view == 'my-works') { ?> active <?php } ?>">
-                    <a class="navigation-link" href="<?= DOMAIN_URL ?>my-works">
+                <li class="display-table parent-size navigation-el <?php if ($view == 'my-works') { ?> active <?php } ?>">
+                    <a class="display-table-cell vertical-align-middle navigation-link" href="<?= DOMAIN_URL ?>my-works">
                         Мои работы
                     </a>
                 </li>
-                <li class="navigation-el <?php if ($view == 'contacts') { ?> active <?php } ?>">
-                    <a class="navigation-link" href="<?= DOMAIN_URL ?>contacts">
+                <li class="display-table parent-size navigation-el <?php if ($view == 'contacts') { ?> active <?php } ?>">
+                    <a class="display-table-cell vertical-align-middle navigation-link" href="<?= DOMAIN_URL ?>contacts">
                         Связаться со мной
                     </a>
                 </li>
