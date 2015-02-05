@@ -1,0 +1,239 @@
+.my-works {
+  margin-bottom: 39px;
+  overflow: hidden;
+  background: #eff3f7;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.gallery {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  margin-top: 17px;
+}
+.gallery .gallery-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.gallery .project-preview {
+  width: 179px;
+  height: 125px;
+  display: inline-block;
+  border: 2px solid #3ba8c0;
+}
+.gallery .project-info {
+  text-align: center;
+}
+.gallery .project-source {
+  font: 13px 'firasans-lightitalic';
+  color: #3ba8c0;
+}
+.gallery .project-description {
+  font: 15px 'firasans-light';
+  color: #4a545d;
+}
+.gallery .download-project-btn {
+  width: 179px;
+  height: 125px;
+  background: #edf8fc;
+  border: 1px dashed #3ca9c0;
+}
+.gallery .download-project-btn:hover {
+  border: 1px dashed #3590a6;
+  background: #a8c5dd;
+  cursor: pointer;
+}
+.gallery .download-project-icon {
+  display: inline-block;
+  background-image: url('../../img/spritesheets/ui.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+.gallery .add-project-btn-txt {
+  color: #3ba8c0;
+  font: 13px 'firasans-lightitalic';
+}
+
+.add-project-popup {
+  width: 362px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -241px 0 0 -181px;
+  background-color: #eff3f7;
+  box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.add-project-popup .add-project-form-label {
+  font-size: 17px;
+  color: #959aa8;
+}
+.add-project-popup .project-popup-content {
+  padding: 7px 21px;
+}
+.add-project-popup .add-project-popup-header {
+  background: #48cbe8;
+  padding: 0 12px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.add-project-popup .add-project-popup-title {
+  height: 44px;
+  font: 25px 'firasans-regular';
+  color: #fff;
+}
+.add-project-popup .project-popup-close-btn {
+  line-height: 1;
+  display: inline-block;
+  background-image: url('../../img/spritesheets/ui.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: -42px 0;
+  height: 25px;
+  width: 25px;
+}
+.add-project-popup .project-popup-form-fieldset {
+  margin: 0 0 7px 0;
+}
+.add-project-popup .header-bottom-border {
+  height: 9px;
+  background: #67dffa;
+}
+.add-project-popup .project-textarea {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: 94px;
+  padding: 10px 9px 6px;
+  margin: 0 0 8px 0;
+}
+.add-project-popup .submit-project {
+  height: 31px;
+  padding: 0 26px;
+  font-size: 19px;
+  background: #48cbe8;
+  color: #fff;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 2px 0 0 #3ba8c0;
+  -webkit-box-shadow: 0 2px 0 0 #3ba8c0;
+  box-shadow: 0 2px 0 0 #3ba8c0;
+}
+.add-project-popup .submit-project.disabled {
+  background: #8C8C8C;
+  cursor: default;
+  -moz-box-shadow: 0 0 0 0 #687b8f;
+  -webkit-box-shadow: 0 0 0 0 #687b8f;
+  box-shadow: 0 0 0 0 #687b8f;
+}
+.add-project-popup .submit-project:hover {
+  -moz-box-shadow: 0 0 0 0 #3ba8c0;
+  -webkit-box-shadow: 0 0 0 0 #3ba8c0;
+  box-shadow: 0 0 0 0 #3ba8c0;
+}
+.add-project-popup .submit-project:active {
+  -moz-box-shadow: 0 -2px 0 0 #3ba8c0;
+  -webkit-box-shadow: 0 -2px 0 0 #3ba8c0;
+  box-shadow: 0 -2px 0 0 #3ba8c0;
+}
+.add-project-popup .download-img-btn-cell {
+  width: 52px;
+}
+.add-project-popup .download-img-btn {
+  cursor: pointer;
+  position: absolute;
+  background-image: url('../../img/spritesheets/ui.png');
+  background-repeat: no-repeat;
+  background-position: -77px 0;
+  height: 41px;
+  width: 52px;
+}
+
+.project-downloading-error {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #f97e76;
+  background: #f2cccd;
+  color: #f97e76;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.project-downloading-error .error-title {
+  font-size: 25px;
+}
+.project-downloading-error .error-description {
+  font-size: 15px;
+}
+.project-downloading-error .error-block-close-btn {
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-image: url('../../img/spritesheets/ui.png');
+}
+
+.success-notification-popup {
+  position: absolute;
+  width: 350px;
+  height: 92px;
+  top: 50%;
+  margin-top: -46px;
+  left: 50%;
+  margin-left: -175px;
+  background: #eff3f7;
+  padding: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 6px 13px 1px rgba(13, 16, 7, 0.35);
+  -webkit-box-shadow: 0 6px 13px 1px rgba(13, 16, 7, 0.35);
+  box-shadow: 0 6px 13px 1px rgba(13, 16, 7, 0.35);
+}
+
+.project-downloading-success {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #49bb7b;
+  background: #b8e1ce;
+  color: #49bb7b;
+  padding: 0 10px;
+}
+.project-downloading-success .success-title {
+  font-size: 25px;
+}
+.project-downloading-success .success-description {
+  font-size: 15px;
+}
+.project-downloading-success .success-block-close-btn {
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-image: url('../../img/spritesheets/ui.png');
+}
